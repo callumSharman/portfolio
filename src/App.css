@@ -1,15 +1,23 @@
 body{
-  font-family: system-ui;
-  font-size: 1.125rem;
-}
 
-html{
-  color-scheme: light dark;
+  font-family: monospace;
+  font-size: 13;
+
 }
 
 .App {
-  text-align: center;
-
-  width: min(90ch, 100% - 4rem);
+  width: min(120ch, 100% - 4rem);
   margin-inline: auto;
+  border-left: solid;
+  border-right: solid;
+  border-color: black;
+  border-width: 1px;
+  display: block;
+  height: 100vh;
+}
+
+.appContents{
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }

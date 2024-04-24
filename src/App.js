@@ -4,8 +4,20 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Portfolio</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis nibh ultricies malesuada blandit. Integer commodo justo non sem tempus varius. Maecenas blandit facilisis ante quis cursus. Cras non gravida libero. Aliquam erat volutpat. Nulla facilisi. Vivamus vitae sem sed felis elementum tempus imperdiet eget mauris. Fusce consequat quam lacus, quis ornare diam egestas at.</p>
+      <div className="appContents">
+        <h1>Callum Sharman</h1>
+        <p>
+          -
+          <br></br>
+          An enthusiastic and dedicated Computer Science graduate from The University of Melbourne with strong teamwork, 
+          leadership, and communication skills, seeking an internship, graduate role, or entry-level position. 
+          Driven individual, adept in a variety of programming languages, Node.js and the Django web development framework. 
+          Experienced in utilising agile ceremonies to enable smooth development in teams.
+          <br></br>
+          -
+        </p>
+
+      </div>
     </div>
   );
 }
