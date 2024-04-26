@@ -6,18 +6,90 @@ body{
 }
 
 .App {
-  width: min(120ch, 100% - 4rem);
+  width: min(120ch, 100%);
   margin-inline: auto;
   border-left: solid;
   border-right: solid;
   border-color: black;
   border-width: 1px;
   display: block;
-  height: 100vh;
+  z-index: 1;
+
+  height:800px;
+
 }
 
 .appContents{
   padding: 20px;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+.proj1{
+  height:200px;
+  background-color: white;
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  width: 800px;
+  position: relative;
+  left: -100px;
+  margin-top:50px;
+  margin-bottom:50px;
+  z-index: 2;
+}
+
+.proj2{
+  height:200px;
+  background-color: white;
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  width: 800px;
+  position: relative;
+  right: -100px;
+  margin-top:50px;
+  margin-bottom:50px;
+  z-index: 2;
+}
+
+.sideMenu{
+  position: fixed;
+  right:0;
+  width: calc((100vw - 120ch)/2);
+  height: 100%;
+  background-color: white;
+  display: block;
+  border-left:solid;
+  border-width: 1px;
+  border-color: black;
+  z-index: 1;
+}
+
+.menuButton{
+  height:50px;
+  width: 50px;
+  background-color: white;
+  text-align: center;
+  font-size: 30pt;
+  position: relative;
+  left: -51px;
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  border-right: white;
+  cursor: pointer;
+}
+
+.footer{
+  z-index: 100;
+  height: 150px;
+  width: 100%;
+  background-color: white;
+  border-color: black;
+  border:solid;
+  border-bottom: none;
+  border-width: 1px;
+  position: relative;
+  z-index: 50;
 }
