@@ -1,0 +1,12 @@
+custom scroll bars are awesome, get rid of normal
+static/imoveable sites suck
+paralax is mint
+mouse movement affecting the background in some way is LIT
+light/dark mode toggle on the page with a nice transition between styles
+One page is ideal, moving to other pages feels janky
+If needed, loading screens and loading bars slap!
+A logo with 'C' would be sick
+
+Focus on small, interactive elements
+
+

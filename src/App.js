@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Menu from './components/Menu/index.js'
 
 function App() {
   const [sideMenuWidth, setSideMenuWidth] = useState("");
@@ -13,6 +14,11 @@ function App() {
 
   return (
   <>
+    <Menu/>
+
+
+
+    
     <div className='sideMenu' style={{width:sideMenuWidth, zIndex:sideMenuZIndex}}>
       <p></p>
 

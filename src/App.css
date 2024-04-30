@@ -1,3 +1,13 @@
+:root {
+
+  --colour-one: #0E1116;
+  --colour-two: #374A67;
+  --colour-three: #616283;
+  --colour-four: #9E7B9B;
+  --colour-five: #CB9CF2;
+
+}
+
 body{
 
   font-family: monospace;

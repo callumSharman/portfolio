@@ -7,3 +7,7 @@ Requirements:
 - Contact section where enquiries can be made
 - "Who am I?" section
 - links to github projects
+- skills
+
+put goodreads on there as well lol
+i need a short sentence or two to describe myself. e.g. "I build pixel-perfect, engaging, and accessible digital experiences."
