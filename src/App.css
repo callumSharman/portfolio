@@ -5,14 +5,10 @@ body{
   color:#c6cdd8;
 }
 
-.App{
-  height: 100vh;
-  width: 100vw;
-}
 
 .main{
   width: 80%;
-  height: 100%;
+  height: 1000px;
 }
 
 .mainContent{
