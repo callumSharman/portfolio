@@ -2,9 +2,8 @@ body{
   font-family: monospace;
   font-size: 13;
   background-color: #171a1f;
-  color:#c6cdd8;
+  color:#c3cad4;
 }
-
 
 .main{
   width: 80%;
@@ -17,7 +16,7 @@ body{
   display: block;
   z-index: 1;
 
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 h1{
@@ -26,8 +25,37 @@ h1{
   margin: 0;
   padding: 0;
   color: #a7c5f7;
+  animation: h1Load 0.6s ease-in-out;
+  position: relative;
+  left: 0px;
 }
+
+@keyframes h1Load {
+  from{
+    color: #171a1f;
+    left: 200px;
+  }
+}
+
 h2{
-  margin: 0;
-  padding: 0;
+  padding-top: 0px;
+  padding-bottom: 40px;
+  margin:0;
+  position: relative;
+  left: 0px;
+
+  color: #06b100;
+  animation: h2Load 0.6s ease-in-out;
+}
+
+@keyframes h2Load {
+  from{
+    color: #171a1f;
+    left: 200px;
+  }
+}
+
+.section{
+  padding-top: 40px;
+  padding-bottom: 40px;
 }

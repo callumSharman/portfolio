@@ -4,9 +4,9 @@
   background-color: rgba(255, 0, 255, 0.158);
   transition: 0.3s ease-in;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 
   position: fixed;
   right: 0;
@@ -22,14 +22,48 @@
   transition: 0.3s ease-in-out;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+li{
+  list-style: none;
+}
+
+ul{
+  padding: 0px;
+}
+
 .link{
   padding: 5px;
   font-size: 12pt;
+  text-align: center;
 }
 
 .link:hover{
   color: magenta;
   font-weight: bold;
   transition: 0.3s;
+  cursor: pointer;
+}
+
+.externalLinks{
+  height: auto;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+  position: fixed;
+  bottom: 0;
+}
+
+.externalLink{
+  height: 20px;
+  width: 20px;
+  background-color: green;
+  margin: 12px;
   cursor: pointer;
 }
