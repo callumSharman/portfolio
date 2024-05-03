@@ -1,59 +1,19 @@
-import { useState } from 'react';
 import './App.css';
 import Menu from './components/Menu/index.js'
 
 function App() {
-  const [sideMenuWidth, setSideMenuWidth] = useState("");
-  const [sideMenuZIndex, setSideMenuZIndex] = useState("");
-
-
-  function onMenuClick(){
-    setSideMenuWidth("66vw");
-    setSideMenuZIndex("100");
-  }
 
   return (
-  <>
-    <Menu/>
-
-
-
-    
-    <div className='sideMenu' style={{width:sideMenuWidth, zIndex:sideMenuZIndex}}>
-      <p></p>
-
-      <div className='menuButton' onClick={onMenuClick}>
-        =
-
-      </div>
-
-    </div>
-    <div className="App">
-      <div className="appContents">
-        <h1>Callum Sharman</h1>
-        <p>
-          -
-          <br></br>
-          Consequat laborum ea reprehenderit consequat officia ea. Ad dolore ipsum proident Lorem. Qui incididunt laborum duis enim Lorem cillum Lorem laboris. Irure commodo velit voluptate qui ea anim tempor ex reprehenderit culpa. Est nulla culpa esse do aliqua incididunt aliqua anim.
-          Cillum cillum id mollit elit commodo labore pariatur enim ex esse non ipsum fugiat. Qui laboris cupidatat consequat sit pariatur nulla ex cupidatat eu mollit anim elit. Tempor cillum elit laborum do aute sunt fugiat. Fugiat reprehenderit duis adipisicing sit commodo ut sit cupidatat consequat ullamco ullamco Lorem magna cupidatat. Nostrud aute excepteur anim adipisicing Lorem cillum laborum. Ea nisi esse et consectetur qui consequat tempor amet laboris officia elit veniam eu ea.
-          <br></br>
-          -
-        </p>
-
-        <div className='proj1'>
-          Project1
-        </div>
-
-        <div className='proj2'>
-          Project2
+  <div className="App">
+      <Menu/>
+      <div className='main'>
+        <div className='mainContent'>
+          <h1>CALLUM SHARMAN</h1>
+          <h2>Software Engineer/Computer Scientist</h2>
+          Do fugiat ut cupidatat pariatur occaecat dolor ipsum officia anim tempor. Anim officia sint sit laboris. Ipsum enim nostrud officia sit fugiat qui elit laborum duis aliquip est do magna ullamco. Excepteur aliquip mollit enim cillum ad veniam commodo minim deserunt. Do excepteur sint proident aliquip officia exercitation minim quis aliqua adipisicing officia aute. Consequat exercitation anim Lorem consequat magna nulla minim excepteur aliquip.
         </div>
       </div>
-    </div>
-
-    <div className='footer'>
-
-    </div>
-  </>
+  </div>
   );
 }
 
