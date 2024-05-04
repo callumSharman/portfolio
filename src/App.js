@@ -15,7 +15,7 @@ function App() {
           <h2>&lt; Graduate Software Engineer/Computer Scientist /&gt;</h2>
           Do fugiat ut cupidatat pariatur occaecat dolor ipsum officia anim tempor. Anim officia sint sit laboris. Ipsum enim nostrud officia sit fugiat qui elit laborum duis aliquip est do magna ullamco. Excepteur aliquip mollit enim cillum ad veniam commodo minim deserunt. Do excepteur sint proident aliquip officia exercitation minim quis aliqua adipisicing officia aute. Consequat exercitation anim Lorem consequat magna nulla minim excepteur aliquip.
           
-          <ParticleSystem/>
+          <ParticleSystem width={"600"} height={"300"}/>
           
           <div className='section' id='about'>
             <h2>ABOUT</h2>
