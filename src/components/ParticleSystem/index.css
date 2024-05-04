@@ -1,0 +1,8 @@
+.systemWindow{
+  width: 100%;
+  height: 300px;
+  background-color: #171a1f;
+  border: solid;
+  border-color: black;
+  border-width: 3px;
+}

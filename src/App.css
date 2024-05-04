@@ -1,3 +1,7 @@
+:root{
+  --colour-one: #171a1f;
+}
+
 body{
   font-family: monospace;
   font-size: 13;
