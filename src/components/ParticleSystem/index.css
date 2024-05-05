@@ -1,6 +1,9 @@
 .systemCanvas{
+  position: fixed;
+  z-index: 0;
   background-color: var(--colour-one);
-  border: solid;
+  /* border: solid;
   border-color: black;
-  border-width: 3px;
+  border-width: 3px; */
+
 } 

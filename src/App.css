@@ -13,6 +13,7 @@ body{
 .main{
   width: 80%;
   height: 1000px;
+  position: relative;
 }
 
 .mainContent{
