@@ -11,7 +11,9 @@ function ParticleSystem(props){
     ctx.fillStyle = '#171a1f';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    let circles = drawCircles(canvas.width, canvas.height, ctx);
+    let circles = initCircleList(100, canvas.width, canvas.height, 4);
+    drawCircles(circles, canvas);
+
     //animateCanvas(canvas.width, canvas.height, ctx, circles);
 
   })
@@ -34,7 +36,7 @@ export default ParticleSystem;
  * @param {number} maxR max radius
  * @returns {Array<{ x: number, y: number, r: number }>}
  */
-function randomCircles(n, width, height, maxR){
+function initCircleList(n, width, height, maxR){
   let circles = [];
 
   for(let i = 0; i < n; i ++){
@@ -47,16 +49,20 @@ function randomCircles(n, width, height, maxR){
   return circles;
 }
 
-function drawCircles(width, height, ctx){
+/**
+ * draws a list of circles to the given canvas context
+ * @param {Array<{ x: number, y: number, r: number }>} circles list of circles
+ * @param {HTMLCanvasElement} canvas
+ */
+function drawCircles(circles, canvas){
+  const ctx = canvas.getContext('2d');
   ctx.fillStyle = '#343b47'; // circle colour
-  let circles = randomCircles(100, width, height, 4);
 
   circles.forEach(circle => {
     ctx.beginPath();
     ctx.arc(circle.x, circle.y, circle.r, 0, 2 * Math.PI);
     ctx.fill();
   });
-  return circles;
 }
 
 // function animateCanvas(width, height, ctx, circles){
@@ -73,3 +79,11 @@ function drawCircles(width, height, ctx){
 //     circle.x -= 10;
 //   });
 // }
+
+
+/**
+ * 
+ * updateCircleList
+ * 
+ * animateCanvas
+ */
