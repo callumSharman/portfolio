@@ -1,6 +1,15 @@
 import { useRef, useEffect } from 'react';
 import './index.css'
 
+// Parameters for the particle system. Should probably be given when defined
+const PARAMS = {
+  numInitCircles: 100,
+  maxRadius: 4, // - Maximum radius of a particle
+  maxLifeTime: 5000, // - Maximum time in frames for particle life
+  maxVelocity: 0.3, // - Maximum velocity of particle
+  spawnRate: 0.05, // - No. of particles to spawn each frame
+}
+
 function ParticleSystem(props){
   const psRef = useRef(null); // particle system reference
 
@@ -11,11 +20,9 @@ function ParticleSystem(props){
     ctx.fillStyle = '#171a1f';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    const numCircles = 100, maxRadius = 4, maxLifeTime = 5000;
-    let circles = initCircleList(numCircles, canvas, maxRadius, maxLifeTime);
+    let circles = initCircleList(canvas);
 
-    const spawnRate = 0.05;
-    animateCanvas(circles, canvas, spawnRate, maxRadius, maxLifeTime);
+    animateCanvas(circles, canvas);
   })
 
 
@@ -29,18 +36,14 @@ export default ParticleSystem;
 
 /**
  * generates a list of n cirlces centered randomly within a rectangle
- * of 'width' and 'height' with a random radius up to 'maxR'
- * @param {number} n - Number of circles
  * @param {HTMLCanvasElement} canvas
- * @param {number} maxRadius
- * @param {number} maxLifeTime - Maximum time in frames for particle life
- * @returns {Array<{ x: number, y: number, r: number, t: number }>} - 't' is time remaining
+ * @returns {Array<{ x: number, y: number, vx: number, vy: number, r: number, t: number }>} - 't' is time remaining
  */
-function initCircleList(n, canvas, maxRadius, maxLifeTime){
+function initCircleList(canvas){
   let circles = [];
 
-  for(let i = 0; i < n; i ++){
-    circles.push(newCircle(canvas, maxRadius, maxLifeTime));
+  for(let i = 0; i < PARAMS.numInitCircles; i ++){
+    circles.push(newCircle(canvas));
   }
 
   return circles;
@@ -49,23 +52,22 @@ function initCircleList(n, canvas, maxRadius, maxLifeTime){
 /**
  * creates a new circle with random values
  * @param {HTMLCanvasElement} canvas
- * @param {number} maxRadius
- * @param {number} maxLifeTime - Maximum time in frames for particle life
- * @returns {{ x: number, y: number, r: number, t: number }} - 't' is time remaining
+ * @returns {{ x: number, y: number, vx: number, vy: number, r: number, t: number }} - 't' is time remaining
  */
-function newCircle(canvas, maxRadius, maxLifeTime){
-
+function newCircle(canvas){
   return({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    r: Math.random() * maxRadius,
-    t: Math.random() * maxLifeTime,
+    vx: (Math.random() - 0.5) * PARAMS.maxVelocity * 2,
+    vy: (Math.random() - 0.5) * PARAMS.maxVelocity * 2,
+    r: Math.random() * PARAMS.maxRadius,
+    t: Math.random() * PARAMS.maxLifeTime,
   })
 }
 
 /**
  * draws a list of circles to the given canvas context
- * @param {Array<{ x: number, y: number, r: number, t: number }>} circles - List of circles
+ * @param {Array<{ x: number, y: number, vx: number, vy: number, r: number, t: number }>} circles - List of circles
  * @param {HTMLCanvasElement} canvas
  */
 function drawCircles(circles, canvas){
@@ -81,24 +83,24 @@ function drawCircles(circles, canvas){
 
 /**
  * updates a list of cirlces based on some rules and returns the updated list
- * @param {Array<{ x: number, y: number, r: number, t: number }>} circles
+ * @param {Array<{ x: number, y: number, vx: number, vy: number, r: number, t: number }>} circles
  * @param {HTMLCanvasElement} canvas
  * @param {number} numToSpawn - How many particles should be spawn in this update
- * @param {number} maxRadius - Maximum radius of a particle
- * @param {number} maxLifeTime - Maximum time in frames for particle life
- * @returns {Array<{ x: number, y: number, r: number, t: number }>}
+ * @returns {Array<{ x: number, y: number, vx: number, vy: number, r: number, t: number }>}
  */
-function updateCircles(circles, canvas, numToSpawn, maxRadius, maxLifeTime){
+function updateCircles(circles, canvas, numToSpawn){
 
   // remove dead circles from the list
   circles = circles.filter(circle => circle.t >= 0);
 
   circles.forEach(circle => {
+    circle.x += circle.vx;
+    circle.y += circle.vy;
     circle.t -= 1;
   });
 
   for(let i = 1; i <= numToSpawn; i ++){
-    circles.push(newCircle(canvas, maxRadius, maxLifeTime));
+    circles.push(newCircle(canvas, PARAMS.maxRadius, PARAMS.maxLifeTime, PARAMS.maxVelocity));
   }
 
   return circles
@@ -106,26 +108,23 @@ function updateCircles(circles, canvas, numToSpawn, maxRadius, maxLifeTime){
 
 /**
  * 
- * @param {Array<{ x: number, y: number, r: number, t: number }>} circles 
+ * @param {Array<{ x: number, y: number, vx: number, vy: number, r: number, t: number }>} circles 
  * @param {HTMLCanvasElement} canvas 
- * @param {number} spawnRate - No. of particles to spawn each frame
- * @param {number} maxRadius - Maximum radius of a particle
- * @param {number} maxLifeTime - Maximum time in frames for particle life
  * @param {number} numToSpawn - How many particles to spawn this iteration, set to 0 by default
  */
-function animateCanvas(circles, canvas, spawnRate, maxRadius, maxLifeTime, numToSpawn = 0){
+function animateCanvas(circles, canvas, numToSpawn = 0){
 
   // clear the canvas
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0,0, canvas.width, canvas.height);
 
-  if(spawnRate >= 1) numToSpawn = spawnRate
-  else numToSpawn += spawnRate;
+  if(PARAMS.spawnRate >= 1) numToSpawn = PARAMS.spawnRate
+  else numToSpawn += PARAMS.spawnRate;
 
-  circles = updateCircles(circles, canvas, numToSpawn, maxRadius, maxLifeTime);
+  circles = updateCircles(circles, canvas, numToSpawn);
 
   // reset the numToSpawn if just spawned and the spawnRate is less than 1
-  if((spawnRate < 1) && (numToSpawn >= 1)){
+  if((PARAMS.spawnRate < 1) && (numToSpawn >= 1)){
     numToSpawn = 0;
   }
 
@@ -135,7 +134,7 @@ function animateCanvas(circles, canvas, spawnRate, maxRadius, maxLifeTime, numTo
   // recursively loop through itself to animate
 
   // tied to framerate!!
-  window.requestAnimationFrame(() => animateCanvas(circles, canvas, spawnRate, maxRadius, maxLifeTime, numToSpawn));
+  window.requestAnimationFrame(() => animateCanvas(circles, canvas, numToSpawn));
 
   // not tied to framerate BUT extremely jittery (interval is in milliseconds)
   //setTimeout(() => animateCanvas(circles, canvas, interval), interval);
