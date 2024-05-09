@@ -12,9 +12,7 @@ function ParticleSystem(props){
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     let circles = initCircleList(100, canvas.width, canvas.height, 4);
-    drawCircles(circles, canvas);
-
-    //animateCanvas(canvas.width, canvas.height, ctx, circles);
+    animateCanvas(circles, canvas);
 
   })
 
@@ -65,25 +63,30 @@ function drawCircles(circles, canvas){
   });
 }
 
-// function animateCanvas(width, height, ctx, circles){
-//   // clear the canvas first
-//   ctx.clearRect(0,0, width, height);
-//   shiftCirclesLeft(circles);
-
-//   // will recursively loop through itself to animate
-//   //window.requestAnimationFrame(animateCanvas(width, height, ctx))
-// }
-
-// function shiftCirclesLeft(circles){
-//   circles.forEach(circle => {
-//     circle.x -= 10;
-//   });
-// }
-
+/**
+ * updates a list of cirlces based on some rules
+ * @param {Array<{ x: number, y: number, r: number }>} circles 
+ */
+function updateCircles(circles){
+  circles.forEach(circle => {
+    circle.x -= 10;
+  });
+}
 
 /**
  * 
- * updateCircleList
- * 
- * animateCanvas
+ * @param {Array<{ x: number, y: number, r: number }>} circles 
+ * @param {HTMLCanvasElement} canvas 
  */
+function animateCanvas(circles, canvas){
+
+  // clear the canvas
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0,0, canvas.width, canvas.height);
+
+  updateCircles(circles);
+  drawCircles(circles, canvas);
+
+  // recursively loop through itself to animate
+  window.requestAnimationFrame(() => animateCanvas(circles, canvas))
+}
