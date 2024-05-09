@@ -3,11 +3,15 @@ import './index.css'
 
 // Parameters for the particle system. Should probably be given when defined
 const PARAMS = {
-  numInitCircles: 100,
-  maxRadius: 4, // - Maximum radius of a particle
-  maxLifeTime: 5000, // - Maximum time in frames for particle life
-  maxVelocity: 0.3, // - Maximum velocity of particle
-  spawnRate: 0.05, // - No. of particles to spawn each frame
+  numInitCircles: 15,
+  maxRadius: 200, // - max radius of a particle
+  maxLifeTime: 5000, // - max time in frames for particle life
+  maxVelocity: 0.2, // - max velocity of particle
+  spawnRate: 1, // - number of particles to spawn each frame
+  maxNum: 15, // - max number of particles at once
+  minNum: 10, // - min number of particles at once NOT CURRENTLY OPERATING
+  particleColour: 'rgb(59, 67, 79, 1)', // colour when close to camera, will blend to background when further away
+  backgroundColour: 'rgba(23, 26, 31, 1)',
 }
 
 function ParticleSystem(props){
@@ -17,7 +21,7 @@ function ParticleSystem(props){
     const canvas = psRef.current;
   
     const ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#171a1f';
+    ctx.fillStyle = PARAMS.backgroundColour;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     let circles = initCircleList(canvas);
@@ -72,9 +76,20 @@ function newCircle(canvas){
  */
 function drawCircles(circles, canvas){
   const ctx = canvas.getContext('2d');
-  ctx.fillStyle = '#343b47'; // circle colour
+
 
   circles.forEach(circle => {
+
+    // regex pattern to match the last number in the colour string
+    let regex = /([\d.]+)(?=\))/;
+    let colourA = 1/(PARAMS.maxRadius/circle.r); // dimmer if small, giving perspective
+    let colour = PARAMS.particleColour;
+    // adjust the A value
+    colour = colour.replace(regex, colourA);
+    console.log(colour);
+    ctx.fillStyle = colour;
+
+
     ctx.beginPath();
     ctx.arc(circle.x, circle.y, circle.r, 0, 2 * Math.PI);
     ctx.fill();
@@ -100,7 +115,9 @@ function updateCircles(circles, canvas, numToSpawn){
   });
 
   for(let i = 1; i <= numToSpawn; i ++){
-    circles.push(newCircle(canvas, PARAMS.maxRadius, PARAMS.maxLifeTime, PARAMS.maxVelocity));
+    if(circles.length < PARAMS.maxNum) {
+      circles.push(newCircle(canvas, PARAMS.maxRadius, PARAMS.maxLifeTime, PARAMS.maxVelocity));
+    }
   }
 
   return circles

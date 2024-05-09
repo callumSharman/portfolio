@@ -2,6 +2,7 @@
   width:20%;
   height:100%;
   background-color: rgba(255, 0, 255, 0.158);
+  backdrop-filter: blur(1px);
   transition: 0.3s ease-in;
   display: flex;
   align-items: center;
@@ -17,7 +18,7 @@
 .menu:hover{
   width: 25%;
   background-color: rgba(255, 0, 255, 0.384);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(2px);
   box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.205);
   transition: 0.3s ease-in-out;
 }
@@ -63,7 +64,7 @@ ul{
 .externalLink{
   height: 20px;
   width: 20px;
-  background-color: green;
+  background-color: var(--colour-two);
   margin: 12px;
   cursor: pointer;
 }

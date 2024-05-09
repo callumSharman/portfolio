@@ -1,5 +1,6 @@
 :root{
-  --colour-one: #171a1f;
+  --colour-one: rgba(23, 26, 31, 1);
+  --colour-two: #2d76f3;
 }
 
 body{
@@ -50,7 +51,7 @@ h2{
   position: relative;
   left: 0px;
 
-  color: #06b100;
+  color: var(--colour-two);
   animation: h2Load 0.6s ease-in-out;
 }
 
