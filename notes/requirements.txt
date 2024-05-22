@@ -1,7 +1,7 @@
 Requirements:
 - Projects
 - Page for each project
-- Links to socials
+- DONE - Links to socials
 - Contact information and all relevant links
 - Up to date and detailed copy of my resume
 - Contact section where enquiries can be made
