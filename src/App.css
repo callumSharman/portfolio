@@ -9,7 +9,7 @@ body{
   font-family: monospace;
   font-size: 11pt;
   background-color: var(--colour-one);
-  color:#b7c0ca;
+  color:#a4acb6;
 }
 
 .main{
@@ -39,13 +39,6 @@ h1{
   left: 0px;
 }
 
-@keyframes h1Load {
-  from{
-    color: var(--colour-one);
-    left: 200px;
-  }
-}
-
 h2{
   padding-top: 0px;
   padding-bottom: 10px;
@@ -56,6 +49,19 @@ h2{
 
   color: var(--colour-two);
   animation: h2Load 0.6s ease-in-out;
+}
+
+h3{
+  font-size: 13pt;
+  color: #d0dae6;
+  margin: 0;
+}
+
+@keyframes h1Load {
+  from{
+    color: var(--colour-one);
+    left: 200px;
+  }
 }
 
 @keyframes h2Load {
