@@ -38,18 +38,12 @@ function App() {
   return (
   <div className="App">
       <Menu sections={ sections }/>
-      {/* <ParticleSystem width={windowWidth} height={windowHeight}/> */}
+      <ParticleSystem width={windowWidth} height={windowHeight}/>
       <div className='main'>
         <div className='mainContent'>
           <h1>CALLUM SHARMAN</h1>
           <h2>&lt; Graduate Software Engineer - Computer Scientist - Freelancer /&gt;</h2>
-
           <p></p>
-
-          <div className='section' id='projects'>
-            <SectionHeading text={"PROJECTS"}></SectionHeading>
-            { projectItems }
-          </div>
 
           <div className='section' id='about'>
             <SectionHeading text={"ABOUT"}></SectionHeading>
@@ -61,6 +55,11 @@ function App() {
             <br></br><br></br>
             My passion for technology drives me to continually learn and grow, making meaningful contributions in fast-paced environments. 
             I am excited to bring my diverse skill set and enthusiasm for problem-solving to new challenges.
+          </div>
+
+          <div className='section' id='projects'>
+            <SectionHeading text={"PROJECTS"}></SectionHeading>
+            { projectItems }
           </div>
 
           <div className='section' id='contact'>
