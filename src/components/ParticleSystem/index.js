@@ -3,13 +3,13 @@ import './index.css'
 
 // Parameters for the particle system. Should probably be given when defined
 const PARAMS = {
-  numInitCircles: 15,
-  maxRadius: 200, // - max radius of a particle
+  numInitCircles: 10,
+  maxRadius: 150, // - max radius of a particle
   maxLifeTime: 5000, // - max time in frames for particle life
   maxVelocity: 0.2, // - max velocity of particle
   spawnRate: 1, // - number of particles to spawn each frame
-  maxNum: 15, // - max number of particles at once
-  minNum: 10, // - min number of particles at once NOT CURRENTLY OPERATING
+  maxNum: 10, // - max number of particles at once
+  minNum: 5, // - min number of particles at once NOT CURRENTLY OPERATING
   particleColour: 'rgb(59, 67, 79, 1)', // colour when close to camera, will blend to background when further away
   backgroundColour: 'rgba(23, 26, 31, 1)',
 }

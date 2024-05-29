@@ -14,7 +14,7 @@ function Project({ name, img, desc, technologies, date }){
       <div className='leftSide'></div>
 
       <div className='rightSide'>
-        <h3>{ name }</h3>
+        <h3 className='projectName'>{ name } ↗</h3>
         <p>{ desc }</p>
         <ul className='techList'>{ technologyBubbles }</ul>
 

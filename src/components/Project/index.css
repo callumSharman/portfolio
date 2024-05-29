@@ -11,13 +11,22 @@
   flex-direction: row;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 10px;
+  transition: 0.05s ease-in-out;
+}
+
+.projectContainer:hover{
+  background-color: #2d76f318;
+  backdrop-filter: blur(2px);
+  transition: 0.05s ease-in-out;
+  cursor: pointer;
 }
 
 .leftSide{
   width: 30%;
   border: solid;
   border-width: 2px;
-  border-color: rgb(126, 126, 126);
+  border-color: rgba(126, 126, 126, 0);
 }
 
 .rightSide{
