@@ -1,7 +1,7 @@
 :root{
   --colour-one: rgba(23, 26, 31, 1);
-  --colour-two: #2d76f3;
-  --colour-three: #a7c5f7;
+  --colour-two: #2d76f3; --colour-two-transp:#2d76f39d;
+  --colour-three: #b0cfff;
 }
 
 body{

@@ -16,20 +16,27 @@ function App() {
                       img: rayTracerImg, 
                       desc: "Ray tracing engine developed in C, designed to simulate indirect lighting and various surface types for spheres. The engine renders 3D scenes by tracing the path of light rays as they interact with objects, producing realistic images with reflections, refractions, and shadows.",
                       technologies: ["C"],
+                      date: "January 2024",
                     },
                     
                     {name: "Bell's Best Cuts", 
                       img: bellsBestCutsImg, 
                       desc:"Website custom designed and developed for Bell's Best Cuts, utilising Node.js, HTML, CSS and JavaScript. Throughout the project, I effectively communicated with the client, organised meetings, and led discussions to ensure adherence to their requirements.",
                       technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
+                      date: "March 2024 - Present",
                     },
                     
                     {name: 'Portfolio',
                       technologies: ["React.js", "HTML", "CSS", "JavaScript"],
+                      date: "May 2024",
                     }];
 
   const projectItems = projects.map(project => {
-    return<Project name={project.name} img={project.img} desc={project.desc} technologies={ project.technologies }></Project>
+    return(<Project name={project.name}
+                    img={project.img} 
+                    desc={project.desc} 
+                    technologies={ project.technologies } 
+                    date={ project.date }></Project>)
   });
 
   const windowWidth = window.innerWidth;
@@ -38,12 +45,17 @@ function App() {
   return (
   <div className="App">
       <Menu sections={ sections }/>
-      <ParticleSystem width={windowWidth} height={windowHeight}/>
+      {/* <ParticleSystem width={windowWidth} height={windowHeight}/> */}
       <div className='main'>
         <div className='mainContent'>
           <h1>CALLUM SHARMAN</h1>
           <h2>&lt; Graduate Software Engineer - Computer Scientist - Freelancer /&gt;</h2>
           <p></p>
+
+          <div className='section' id='projects'>
+            <SectionHeading text={"PROJECTS"}></SectionHeading>
+            { projectItems }
+          </div>
 
           <div className='section' id='about'>
             <SectionHeading text={"ABOUT"}></SectionHeading>
@@ -55,11 +67,6 @@ function App() {
             <br></br><br></br>
             My passion for technology drives me to continually learn and grow, making meaningful contributions in fast-paced environments. 
             I am excited to bring my diverse skill set and enthusiasm for problem-solving to new challenges.
-          </div>
-
-          <div className='section' id='projects'>
-            <SectionHeading text={"PROJECTS"}></SectionHeading>
-            { projectItems }
           </div>
 
           <div className='section' id='contact'>

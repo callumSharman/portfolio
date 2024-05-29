@@ -1,0 +1,9 @@
+.bubble{
+  background-color: var(--colour-two-transp);
+  color: var(--colour-three);
+  margin-right: 15px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+}
