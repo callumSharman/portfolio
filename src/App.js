@@ -16,27 +16,27 @@ function App() {
                       img: rayTracerImg, 
                       desc: "Ray tracing engine developed in C, designed to simulate indirect lighting and various surface types for spheres. The engine renders 3D scenes by tracing the path of light rays as they interact with objects, producing realistic images with reflections, refractions, and shadows.",
                       technologies: ["C"],
-                      date: "January 2024",
+                      link: "https://github.com/callumSharman/RayTracer",
                     },
                     
                     {name: "Bell's Best Cuts", 
                       img: bellsBestCutsImg, 
                       desc:"Website custom designed and developed for Bell's Best Cuts, utilising Node.js, HTML, CSS and JavaScript. Throughout the project, I effectively communicated with the client, organised meetings, and led discussions to ensure adherence to their requirements.",
                       technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
-                      date: "March 2024 - Present",
+                      link: "https://bellsbestcuts.com",
                     },
                     
                     {name: 'Portfolio',
                       technologies: ["React.js", "HTML", "CSS", "JavaScript"],
-                      date: "May 2024",
+                      link: "https://callumsharman.github.io/portfolio/",
                     }];
 
   const projectItems = projects.map(project => {
     return(<Project name={project.name}
                     img={project.img} 
                     desc={project.desc} 
-                    technologies={ project.technologies } 
-                    date={ project.date }></Project>)
+                    technologies={ project.technologies }
+                    link={ project.link}></Project>)
   });
 
   const windowWidth = window.innerWidth;
