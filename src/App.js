@@ -6,7 +6,10 @@ import Project from './components/Project/index.js';
 
 
 import rayTracerImg from './img/raytracer/glass_final_highres.png'
+import rayTracerImg2 from './img/raytracer/glass_metal_highres.png'
 import bellsBestCutsImg from './img/bellsbestcuts/bells1.JPG'
+import cipherImg from './img/CIPHER/ingame.JPG'
+import glitchShaderImg from './img/glitchShader/shaderExample.JPG'
 
 function App() {
   const sections = ['About', 'Projects', 'Contact', 'Resume'];
@@ -14,10 +17,26 @@ function App() {
   const projects = [
                     {
                       name: 'COMP30022 - IT Project (capstone)',
-                      img: rayTracerImg,
+                      img: rayTracerImg2,
                       desc: "Full stack developer on a Django web application, integrated with Canvas LMS, handling student extension requests and queries.",
                       technologies: ["Django", "Python", "HTML", "CSS", "JavaScript", "SQL", "Docker"],
                       link: "https://github.com/jkay-y/IT-Project-6-people",
+                    },
+
+                    {
+                      name: 'CIPHER',
+                      img: cipherImg,
+                      desc: "Ea pariatur ut ut eiusmod. Ex duis magna laboris nulla nostrud enim enim veniam nulla veniam commodo esse qui reprehenderit. Culpa aute sint officia non dolor. Consequat adipisicing minim dolore labore amet est ut commodo commodo.",
+                      technologies: ["C#", "HLSL", "Unity"],
+                      link: "https://github.com/COMP30019/project-2-s3gfault",
+                    },
+
+                    {
+                      name: 'HLSL Glitch Shader',
+                      img: glitchShaderImg,
+                      desc: "A glitch shader written in HLSL, designed for use on 3D models in the Unity game engine. This shader creates a visually striking glitch effect by dynamically manipulating the vertices and texture colours of the models, simulating the appearance of digital distortion.",
+                      technologies: ["HLSL", "C#"],
+                      link: "https://github.com/callumSharman/glitch-shader",
                     },
 
                     {
@@ -35,7 +54,20 @@ function App() {
                       technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
                       link: "https://bellsbestcuts.com",
                     },
-                  ];
+                    
+                    {
+                      name: 'Portfolio',
+                      technologies: ["React.js", "HTML", "CSS", "JavaScript"],
+                      link: "https://callumsharman.github.io/portfolio/",
+                    },
+                    
+                    {
+                      name: 'Infexion AI',
+                      img: rayTracerImg2,
+                      desc: "Consequat irure consectetur sunt excepteur. Quis in commodo exercitation excepteur sit magna ipsum excepteur reprehenderit. Ad qui dolore ipsum cillum est ea exercitation nulla nisi culpa Lorem id velit labore. Id sit qui minim amet ex minim cillum laboris minim. Adipisicing sunt sunt laborum pariatur nisi aute ex adipisicing.",
+                      technologies: ["Python"],
+                      link: "https://github.com/callumSharman/COMP30024_Project_PartB",
+                    },];
 
   const projectItems = projects.map(project => {
     return(<Project name={project.name}

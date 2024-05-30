@@ -16,7 +16,7 @@
 }
 
 .projectContainer:hover{
-  background-color: #2d76f318;
+  background-color: var(--colour-four);
   backdrop-filter: blur(2px);
   transition: 0.03s ease-in-out;
   cursor: pointer;

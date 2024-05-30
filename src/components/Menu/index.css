@@ -1,7 +1,7 @@
 .menu{
   width:20%;
   height:100%;
-  background-color: rgba(255, 0, 255, 0.158);
+  background-color: var(--colour-four);
   backdrop-filter: blur(1px);
   transition: 0.3s ease-in;
   display: flex;
@@ -17,7 +17,7 @@
 
 .menu:hover{
   width: 25%;
-  background-color: rgba(255, 0, 255, 0.384);
+  background-color: #2d76f33b;
   backdrop-filter: blur(2px);
   box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.205);
   transition: 0.3s ease-in-out;
@@ -45,7 +45,7 @@ ul{
 }
 
 .link:hover{
-  color: magenta;
+  color: var(--colour-two);
   font-weight: bold;
   transition: 0.3s;
   cursor: pointer;
