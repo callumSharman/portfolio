@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.9c49d9b0.css",
-    "main.js": "/portfolio/static/js/main.e08b917f.js",
+    "main.css": "/portfolio/static/css/main.dfb40fe1.css",
+    "main.js": "/portfolio/static/js/main.f0a00558.js",
+    "static/media/bells1.JPG": "/portfolio/static/media/bells1.02d6af578e273214468d.JPG",
+    "static/media/glass_metal_highres.png": "/portfolio/static/media/glass_metal_highres.02d4acd77375cff3388b.png",
     "static/media/glass_final_highres.png": "/portfolio/static/media/glass_final_highres.69742febd7185de1512c.png",
-    "static/media/bells1.JPG": "/portfolio/static/media/bells1.903d73352d249857cfe8.JPG",
+    "static/media/ingame.JPG": "/portfolio/static/media/ingame.f49e1eaa680d6c565dbf.JPG",
+    "static/media/shaderExample.JPG": "/portfolio/static/media/shaderExample.bc0986acc412807b8a49.JPG",
     "static/media/icons8-github.svg": "/portfolio/static/media/icons8-github.81c835e71e504f35a4297ff43bb15507.svg",
     "static/media/icons8-goodreads.svg": "/portfolio/static/media/icons8-goodreads.783abd95d2070a2da1463ab3bc88ed53.svg",
     "static/media/icons8-linkedin.svg": "/portfolio/static/media/icons8-linkedin.169894585126130448dc8b0f64a41b18.svg",
     "index.html": "/portfolio/index.html",
-    "main.9c49d9b0.css.map": "/portfolio/static/css/main.9c49d9b0.css.map",
-    "main.e08b917f.js.map": "/portfolio/static/js/main.e08b917f.js.map"
+    "main.dfb40fe1.css.map": "/portfolio/static/css/main.dfb40fe1.css.map",
+    "main.f0a00558.js.map": "/portfolio/static/js/main.f0a00558.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c49d9b0.css",
-    "static/js/main.e08b917f.js"
+    "static/css/main.dfb40fe1.css",
+    "static/js/main.f0a00558.js"
   ]
 }
