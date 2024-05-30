@@ -12,24 +12,30 @@ function App() {
   const sections = ['About', 'Projects', 'Contact', 'Resume'];
 
   const projects = [
-                    {name: 'RayTracer', 
+                    {
+                      name: 'COMP30022 - IT Project (capstone)',
+                      img: rayTracerImg,
+                      desc: "Full stack developer on a Django web application, integrated with Canvas LMS, handling student extension requests and queries.",
+                      technologies: ["Django", "Python", "HTML", "CSS", "JavaScript", "SQL", "Docker"],
+                      link: "https://github.com/jkay-y/IT-Project-6-people",
+                    },
+
+                    {
+                      name: 'RayTracer', 
                       img: rayTracerImg, 
                       desc: "Ray tracing engine developed in C, designed to simulate indirect lighting and various surface types for spheres. The engine renders 3D scenes by tracing the path of light rays as they interact with objects, producing realistic images with reflections, refractions, and shadows.",
                       technologies: ["C"],
                       link: "https://github.com/callumSharman/RayTracer",
                     },
                     
-                    {name: "Bell's Best Cuts", 
+                    {
+                      name: "Bell's Best Cuts", 
                       img: bellsBestCutsImg, 
                       desc:"Website custom designed and developed for Bell's Best Cuts, utilising Node.js, HTML, CSS and JavaScript. Throughout the project, I effectively communicated with the client, organised meetings, and led discussions to ensure adherence to their requirements.",
                       technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
                       link: "https://bellsbestcuts.com",
                     },
-                    
-                    {name: 'Portfolio',
-                      technologies: ["React.js", "HTML", "CSS", "JavaScript"],
-                      link: "https://callumsharman.github.io/portfolio/",
-                    }];
+                  ];
 
   const projectItems = projects.map(project => {
     return(<Project name={project.name}

@@ -1,6 +1,6 @@
 .projectContainer{
   width:100%;
-  min-height: 200px;
+  min-height: 150px;
   height:auto;
 
   display: flex;
@@ -34,7 +34,6 @@
 
 .imgContainer{
   width: 80%;
-  height: auto;
   border: solid;
   border-width: 3px;
   border-color: rgba(48, 54, 65, 0.651);
@@ -44,10 +43,14 @@
 .rightSide{
   width: 70%;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .techList{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 0px;
 }
