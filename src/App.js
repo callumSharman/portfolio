@@ -16,7 +16,7 @@ import { useEffect, useState } from 'react';
 function App() {
 
   const [sections, setSections] = useState([
-    { name: 'About', active: false },
+    { name: 'About', active: true },
     { name: 'Projects', active: false },
     { name: 'Contact', active: false },
     { name: 'Resume', active: false },
@@ -80,12 +80,13 @@ function App() {
   });
 
   const determineActiveSection = (section, scrollHeight) => {
-
+    // may need to add a condition for when you're at the bottom of the page
     const element = document.getElementById(section.name.toLowerCase());
     const { top } = element.getBoundingClientRect();
     const elemHeight = top + window.scrollY;
 
     // if the height of the current section is <= height scrolled to + 20% of the window height
+    // to make the section become active when its lower on the page, inc the % from 20
     if(elemHeight <= (scrollHeight + (window.innerHeight * 0.2))){
       return true;
     }

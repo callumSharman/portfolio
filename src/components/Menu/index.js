@@ -12,7 +12,9 @@ function Menu({ sections }){
   // convert the given sections in html
   const links = sections.map((section, index) => {
     return<li key={index} 
-              style={{textDecoration: section.active ? 'underline': 'none',}} 
+              style={{fontSize: section.active ? '20pt': '12pt',
+                      fontWeight: section.active ? 'bold': 'normal',
+              }} 
               className='link' 
               onClick={() => scrollToSection(section.name.toLowerCase())}>
             {section.name}

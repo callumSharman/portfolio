@@ -42,6 +42,7 @@ ul{
   padding: 5px;
   font-size: 12pt;
   text-align: center;
+  transition: 0.1s ease-in-out;
 }
 
 .link:hover{
