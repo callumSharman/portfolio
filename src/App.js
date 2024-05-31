@@ -10,6 +10,7 @@ import rayTracerImg2 from './img/raytracer/glass_metal_highres.png'
 import bellsBestCutsImg from './img/bellsbestcuts/bells1.JPG'
 import cipherImg from './img/CIPHER/ingame.JPG'
 import glitchShaderImg from './img/glitchShader/shaderExample.JPG'
+import infextionAI from './img/infextionAI/infextionAI2.JPG'
 
 function App() {
   const sections = ['About', 'Projects', 'Contact', 'Resume'];
@@ -18,7 +19,7 @@ function App() {
                     {
                       name: 'COMP30022 - IT Project (capstone)',
                       img: rayTracerImg2,
-                      desc: "A Django web application, integrated with Canvas LMS, handling student extension requests and queries.",
+                      desc: "A Django web application, integrated with Canvas LMS, handling student extension requests and queries. Created collaboratively in a team of five, liasing with university faculty clients to deliver the solution. Utilised agile ceremonies to enable smooth and efficient development.",
                       technologies: ["Django", "Python", "HTML", "CSS", "JavaScript", "SQL", "Docker"],
                       link: "https://github.com/jkay-y/IT-Project-6-people",
                     },
@@ -49,7 +50,7 @@ function App() {
                     {
                       name: 'CIPHER',
                       img: cipherImg,
-                      desc: "A fast-paced dungeon crawling game set in an oppressive cyberpunk world, offering high replayability through randomized upgrades. Developed in Unity with all game logic written in C#, featuring custom shaders written in HLSL.",
+                      desc: "A fast-paced dungeon crawling game set in an oppressive cyberpunk world, offering high replayability through randomized upgrades. Developed in a group of four in the Unity game engine with all game logic written in C#, featuring custom shaders written in HLSL.",
                       technologies: ["C#", "HLSL", "Unity"],
                       link: "https://github.com/COMP30019/project-2-s3gfault",
                     },
@@ -64,8 +65,8 @@ function App() {
                     
                     {
                       name: 'Infexion AI',
-                      img: rayTracerImg2,
-                      desc: "Competitive AI designed to play the game “Infexion”, written in python. Utilises a Monte Carlo heuristic tree search algorithm to determine moves.",
+                      img: infextionAI,
+                      desc: "Competitive AI developed in a group of two. Designed to play the game “Infexion”, written in python. Utilises a Monte Carlo heuristic tree search algorithm to determine moves.",
                       technologies: ["Python"],
                       link: "https://github.com/callumSharman/COMP30024_Project_PartB",
                     },];

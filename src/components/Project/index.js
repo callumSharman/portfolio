@@ -1,22 +1,46 @@
 import './index.css'
 import TechnologyBubble from '../TechnologyBubble';
+import {useState} from 'react'
 
 function Project({ name, img, desc, technologies, link }){
+
+  const [isHover, setIsHover] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHover(true);
+    console.log("Mouse entered");
+  };
+
+  const handleMouseLeave = () => {
+    setIsHover(false);
+    console.log("Mouse left");
+  };
 
   const technologyBubbles = technologies.map((tech, index) => {
     return <li key={ index }>
               <TechnologyBubble name={ tech }></TechnologyBubble>
            </li>
-  })
+  });
+
+  
 
   return(
-    <div className='projectContainer' onClick={() => window.open(link, '_blank')}>
+    <div className='projectContainer' 
+      onClick={() => window.open(link, '_blank')} 
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}>
+
       <div className='leftSide'>
         <img className='imgContainer' src={img} alt="project logo"/>
       </div>
 
       <div className='rightSide'>
-        <h3 className='projectName'>{ name } ↗</h3>
+        <h3 className='projectName' 
+          style={{textDecoration: isHover ? 'underline' : 'none',
+                  transition: '0.01s ease-in-out',
+          }}>
+          { name } ↗
+        </h3>
         <p>{ desc }</p>
         <ul className='techList'>{ technologyBubbles }</ul>
 
