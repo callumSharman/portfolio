@@ -18,25 +18,24 @@ function App() {
                     {
                       name: 'COMP30022 - IT Project (capstone)',
                       img: rayTracerImg2,
-                      desc: "Full stack developer on a Django web application, integrated with Canvas LMS, handling student extension requests and queries.",
+                      desc: "A Django web application, integrated with Canvas LMS, handling student extension requests and queries.",
                       technologies: ["Django", "Python", "HTML", "CSS", "JavaScript", "SQL", "Docker"],
                       link: "https://github.com/jkay-y/IT-Project-6-people",
                     },
 
                     {
-                      name: 'CIPHER',
-                      img: cipherImg,
-                      desc: "Ea pariatur ut ut eiusmod. Ex duis magna laboris nulla nostrud enim enim veniam nulla veniam commodo esse qui reprehenderit. Culpa aute sint officia non dolor. Consequat adipisicing minim dolore labore amet est ut commodo commodo.",
-                      technologies: ["C#", "HLSL", "Unity"],
-                      link: "https://github.com/COMP30019/project-2-s3gfault",
+                      name: "Bell's Best Cuts", 
+                      img: bellsBestCutsImg, 
+                      desc:"Website custom designed and developed for Bell's Best Cuts, utilising Node.js, HTML, CSS and JavaScript. Throughout the project, I effectively communicated with the client, organised meetings, and led discussions to ensure adherence to their requirements.",
+                      technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
+                      link: "https://bellsbestcuts.com",
                     },
 
                     {
-                      name: 'HLSL Glitch Shader',
-                      img: glitchShaderImg,
-                      desc: "A glitch shader written in HLSL, designed for use on 3D models in the Unity game engine. This shader creates a visually striking glitch effect by dynamically manipulating the vertices and texture colours of the models, simulating the appearance of digital distortion.",
-                      technologies: ["HLSL", "C#"],
-                      link: "https://github.com/callumSharman/glitch-shader",
+                      name: 'Portfolio',
+                      desc:"My personal portfolio website created using React, HTML, CSS, and JavaScript. Take a look around.",
+                      technologies: ["React", "HTML", "CSS", "JavaScript"],
+                      link: "https://callumsharman.github.io/portfolio/",
                     },
 
                     {
@@ -46,25 +45,27 @@ function App() {
                       technologies: ["C"],
                       link: "https://github.com/callumSharman/RayTracer",
                     },
-                    
+
                     {
-                      name: "Bell's Best Cuts", 
-                      img: bellsBestCutsImg, 
-                      desc:"Website custom designed and developed for Bell's Best Cuts, utilising Node.js, HTML, CSS and JavaScript. Throughout the project, I effectively communicated with the client, organised meetings, and led discussions to ensure adherence to their requirements.",
-                      technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
-                      link: "https://bellsbestcuts.com",
+                      name: 'CIPHER',
+                      img: cipherImg,
+                      desc: "A fast-paced dungeon crawling game set in an oppressive cyberpunk world, offering high replayability through randomized upgrades. Developed in Unity with all game logic written in C#, featuring custom shaders written in HLSL.",
+                      technologies: ["C#", "HLSL", "Unity"],
+                      link: "https://github.com/COMP30019/project-2-s3gfault",
                     },
-                    
+
                     {
-                      name: 'Portfolio',
-                      technologies: ["React.js", "HTML", "CSS", "JavaScript"],
-                      link: "https://callumsharman.github.io/portfolio/",
+                      name: 'HLSL Glitch Shader',
+                      img: glitchShaderImg,
+                      desc: "Glitch shader written in HLSL, designed for use on 3D models in the Unity game engine. This shader creates a visually striking glitch effect by dynamically manipulating the vertices and texture colours of the models, simulating the appearance of digital distortion.",
+                      technologies: ["HLSL", "C#"],
+                      link: "https://github.com/callumSharman/glitch-shader",
                     },
                     
                     {
                       name: 'Infexion AI',
                       img: rayTracerImg2,
-                      desc: "Consequat irure consectetur sunt excepteur. Quis in commodo exercitation excepteur sit magna ipsum excepteur reprehenderit. Ad qui dolore ipsum cillum est ea exercitation nulla nisi culpa Lorem id velit labore. Id sit qui minim amet ex minim cillum laboris minim. Adipisicing sunt sunt laborum pariatur nisi aute ex adipisicing.",
+                      desc: "Competitive AI designed to play the game “Infexion”, written in python. Utilises a Monte Carlo heuristic tree search algorithm to determine moves.",
                       technologies: ["Python"],
                       link: "https://github.com/callumSharman/COMP30024_Project_PartB",
                     },];
@@ -90,11 +91,6 @@ function App() {
           <h2>&lt; Graduate Software Engineer - Computer Scientist - Freelancer /&gt;</h2>
           <p></p>
 
-          <div className='section' id='projects'>
-            <SectionHeading text={"PROJECTS"}></SectionHeading>
-            { projectItems }
-          </div>
-
           <div className='section' id='about'>
             <SectionHeading text={"ABOUT"}></SectionHeading>
             I'm a recent graduate from the University of Melbourne, holding a Bachelor of Science in Computing and Software Systems. I thrive on tackling complex projects and 
@@ -105,6 +101,11 @@ function App() {
             <br></br><br></br>
             My passion for technology drives me to continually learn and grow, making meaningful contributions in fast-paced environments. 
             I am excited to bring my diverse skill set and enthusiasm for problem-solving to new challenges.
+          </div>
+
+          <div className='section' id='projects'>
+            <SectionHeading text={"PROJECTS"}></SectionHeading>
+            { projectItems }
           </div>
 
           <div className='section' id='contact'>
