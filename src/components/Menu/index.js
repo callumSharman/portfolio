@@ -11,8 +11,11 @@ function Menu({ sections }){
 
   // convert the given sections in html
   const links = sections.map((section, index) => {
-    return<li key={index} className='link' onClick={() => scrollToSection(section.toLowerCase())}>
-            {section}
+    return<li key={index} 
+              style={{textDecoration: section.active ? 'underline': 'none',}} 
+              className='link' 
+              onClick={() => scrollToSection(section.name.toLowerCase())}>
+            {section.name}
           </li>;
   });
 

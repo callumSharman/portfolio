@@ -3,6 +3,7 @@
   --colour-two: #2d76f3; --colour-two-transp:#2d76f39d;
   --colour-three: #b0cfff;
   --colour-four: #2d76f318;
+  --colour-text: #a4acb6;
 }
 
 body{
@@ -10,12 +11,12 @@ body{
   font-family: monospace;
   font-size: 11pt;
   background-color: var(--colour-one);
-  color:#a4acb6;
+  color: var(--colour-text);
 }
 
 .main{
   width: 80%;
-  height: 1000px;
+  height: 10000px;
   position: relative;
   font-size: inherit;
 }

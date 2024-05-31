@@ -8,12 +8,10 @@ function Project({ name, img, desc, technologies, link }){
 
   const handleMouseEnter = () => {
     setIsHover(true);
-    console.log("Mouse entered");
   };
 
   const handleMouseLeave = () => {
     setIsHover(false);
-    console.log("Mouse left");
   };
 
   const technologyBubbles = technologies.map((tech, index) => {

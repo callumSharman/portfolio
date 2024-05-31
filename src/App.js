@@ -11,19 +11,24 @@ import bellsBestCutsImg from './img/bellsbestcuts/bells1.JPG'
 import cipherImg from './img/CIPHER/ingame.JPG'
 import glitchShaderImg from './img/glitchShader/shaderExample.JPG'
 import infextionAI from './img/infextionAI/infextionAI2.JPG'
+import { useEffect, useState } from 'react';
 
 function App() {
-  const sections = ['About', 'Projects', 'Contact', 'Resume'];
 
-  const projects = [
-                    {
+  const [sections, setSections] = useState([
+    { name: 'About', active: false },
+    { name: 'Projects', active: false },
+    { name: 'Contact', active: false },
+    { name: 'Resume', active: false },
+  ]);
+
+  const projects = [{
                       name: 'COMP30022 - IT Project (capstone)',
                       img: rayTracerImg2,
                       desc: "A Django web application, integrated with Canvas LMS, handling student extension requests and queries. Created collaboratively in a team of five, liasing with university faculty clients to deliver the solution. Utilised agile ceremonies to enable smooth and efficient development.",
                       technologies: ["Django", "Python", "HTML", "CSS", "JavaScript", "SQL", "Docker"],
                       link: "https://github.com/jkay-y/IT-Project-6-people",
                     },
-
                     {
                       name: "Bell's Best Cuts", 
                       img: bellsBestCutsImg, 
@@ -31,14 +36,12 @@ function App() {
                       technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
                       link: "https://bellsbestcuts.com",
                     },
-
                     {
                       name: 'Portfolio',
                       desc:"My personal portfolio website created using React, HTML, CSS, and JavaScript. Take a look around.",
                       technologies: ["React", "HTML", "CSS", "JavaScript"],
                       link: "https://callumsharman.github.io/portfolio/",
                     },
-
                     {
                       name: 'RayTracer', 
                       img: rayTracerImg, 
@@ -46,7 +49,6 @@ function App() {
                       technologies: ["C"],
                       link: "https://github.com/callumSharman/RayTracer",
                     },
-
                     {
                       name: 'CIPHER',
                       img: cipherImg,
@@ -54,7 +56,6 @@ function App() {
                       technologies: ["C#", "HLSL", "Unity"],
                       link: "https://github.com/COMP30019/project-2-s3gfault",
                     },
-
                     {
                       name: 'HLSL Glitch Shader',
                       img: glitchShaderImg,
@@ -62,7 +63,6 @@ function App() {
                       technologies: ["HLSL", "C#"],
                       link: "https://github.com/callumSharman/glitch-shader",
                     },
-                    
                     {
                       name: 'Infexion AI',
                       img: infextionAI,
@@ -78,6 +78,59 @@ function App() {
                     technologies={ project.technologies }
                     link={ project.link}></Project>)
   });
+
+  const determineActiveSection = (section, scrollHeight) => {
+
+    const element = document.getElementById(section.name.toLowerCase());
+    const { top } = element.getBoundingClientRect();
+    const elemHeight = top + window.scrollY;
+
+    // if the height of the current section is <= height scrolled to + 20% of the window height
+    if(elemHeight <= (scrollHeight + (window.innerHeight * 0.2))){
+      return true;
+    }
+    else return false;
+  }
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+      const scrollHeight = window.scrollY;
+      const sectionsLen = sections.length;
+
+      // work backwards through the sections, as soon as one is found to be 
+      // active then break. This will leave only the correct section active
+
+      // find that active section
+      let activeSection = null;
+
+      for(let i = sectionsLen - 1; i >= 0; i --){
+        const section = sections[i];
+        if(determineActiveSection(section, scrollHeight)) {
+          activeSection = section;
+          break;
+        }
+      }
+
+      // no active section found, it must be the top one
+      if (activeSection === null){
+        activeSection = sections[0];
+      }
+
+      // set the active section that you found earlier
+      setSections(sections.map(section => ({
+        ...section,
+        active: activeSection.name.toLowerCase() === section.name.toLowerCase()
+      })));     
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  })
 
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
