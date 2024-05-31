@@ -12,6 +12,10 @@
   position: fixed;
   right: 0;
 
+  border: solid;
+  border-width: 1px;
+  border-color: #2d76f318;
+
   z-index: 9999;
 }
 
