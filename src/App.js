@@ -3,6 +3,7 @@ import Menu from './components/Menu/index.js'
 import ParticleSystem from './components/ParticleSystem/index.js'
 import SectionHeading from './components/SectionHeading/index.js';
 import Project from './components/Project/index.js';
+import SocialLinks from './components/SocialLinks/index.js';
 
 
 import rayTracerImg from './img/raytracer/glass_final_highres.png'
@@ -143,8 +144,11 @@ function App() {
       <div className='main'>
         <div className='mainContent'>
           <h1>CALLUM SHARMAN</h1>
-          <h2>&lt; Graduate Software Engineer - Computer Scientist - Freelancer /&gt;</h2>
+          <h2 className='subTitle'>&lt; Graduate Software Engineer - Computer Scientist - Freelancer /&gt;</h2>
           <p></p>
+
+          <SocialLinks></SocialLinks>
+
 
           <div className='section' id='about'>
             <SectionHeading text={"ABOUT"}></SectionHeading>
