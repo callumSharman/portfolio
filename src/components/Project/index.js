@@ -28,11 +28,11 @@ function Project({ name, img, desc, technologies, link }){
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
 
-      <div className='leftSide'>
+      <div className='imgSectionBefore'>
         <img className='imgContainer' src={img} alt="project logo"/>
       </div>
 
-      <div className='rightSide'>
+      <div className='descSection'>
         <h3 className='projectName' 
           style={{textDecoration: isHover ? 'underline' : 'none',
                   transition: '0.01s ease-in-out',
@@ -42,6 +42,10 @@ function Project({ name, img, desc, technologies, link }){
         <p>{ desc }</p>
         <ul className='techList'>{ technologyBubbles }</ul>
 
+      </div>
+
+      <div className='imgSectionAfter'>
+        <img className='imgContainer' src={img} alt="project logo"/>
       </div>
 
     </div>

@@ -25,9 +25,16 @@
   border-color: #2d76f318;
 }
 
-.leftSide{
-  width: 30%;
+.imgSectionBefore{
   display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgSectionAfter{
+  display: none;
+  width: 30%;
   justify-content: center;
   align-items: center;
 }
@@ -40,7 +47,7 @@
   border-radius: 6px;
 }
 
-.rightSide{
+.descSection{
   width: 70%;
   padding: 10px;
   display: flex;
@@ -59,10 +66,14 @@
   .projectContainer{
     flex-direction: column;
   }
-  .leftSide{
+  .imgSectionBefore{
+    display: none;
+  }
+  .imgSectionAfter{
+    display: flex;
     width: 100%;
   }
-  .rightSide{
+  .descSection{
     width: 100%;
   }
 }

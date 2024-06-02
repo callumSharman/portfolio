@@ -145,8 +145,8 @@ function App() {
         <div className='mainContent'>
           <h1>CALLUM SHARMAN</h1>
           <h2 className='subTitle'>&lt; Graduate Software Engineer - Computer Scientist - Freelancer /&gt;</h2>
-          <div className='socialIcons'><SocialLinks></SocialLinks></div>
           <p></p>
+          <div className='socialIcons'><SocialLinks></SocialLinks></div>
 
           <div className='section' id='about'>
             <SectionHeading text={"ABOUT"}></SectionHeading>
