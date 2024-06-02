@@ -4,6 +4,7 @@ import ParticleSystem from './components/ParticleSystem/index.js'
 import SectionHeading from './components/SectionHeading/index.js';
 import Project from './components/Project/index.js';
 import SocialLinks from './components/SocialLinks/index.js';
+import MenuButton from './components/MenuButton/index.js';
 
 
 import rayTracerImg from './img/raytracer/glass_final_highres.png'
@@ -139,6 +140,9 @@ function App() {
 
   return (
   <div className="App">
+      {/* menu button only visible on mobile */}
+      <MenuButton></MenuButton>
+      
       <Menu sections={ sections }/>
       {/* <ParticleSystem width={windowWidth} height={windowHeight}/> */}
       <div className='main'>

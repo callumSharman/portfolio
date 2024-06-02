@@ -22,7 +22,11 @@ function Menu({ sections }){
   return(
     <>
       <div className='menu'>
+
+        
+
         <div className='inPageLinks'>
+
           {/* links to page areas */}
           <nav><ul>{ links }</ul></nav>
         </div>

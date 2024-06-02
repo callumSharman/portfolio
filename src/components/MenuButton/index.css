@@ -1,0 +1,20 @@
+.menuButton{
+  margin: 10px;
+  width: 50px;
+  position: fixed;
+  z-index: 10000;
+  height: 50px;
+  font-size: 40pt;
+  right: 0;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+@media(max-width: 768px){
+  .menuButton{
+    display: flex;
+    transition: 0.5s;
+  }
+}

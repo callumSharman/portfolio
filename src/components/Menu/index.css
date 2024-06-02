@@ -58,13 +58,26 @@ ul{
 
 .socialLinks{
   padding-bottom: 12px;
-  
   position: fixed;
   bottom: 0;
 }
 
 @media(max-width: 768px) {
   .menu{
-    display:none
+    width: 100%;
+    background-color: #133877de;
+    backdrop-filter: blur(2px);
+  }
+  .menu:hover{
+    width: 100%;
+    background-color: #133877de;
+    backdrop-filter: blur(2px);
+    box-shadow: none;
+  }
+  .link:hover{
+    color: inherit;
+  }
+  .socialLinks{
+    display: none;
   }
 }
