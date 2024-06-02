@@ -54,3 +54,15 @@
   flex-wrap: wrap;
   margin-bottom: 0px;
 }
+
+@media(max-width: 768px) {
+  .projectContainer{
+    flex-direction: column;
+  }
+  .leftSide{
+    width: 100%;
+  }
+  .rightSide{
+    width: 100%;
+  }
+}

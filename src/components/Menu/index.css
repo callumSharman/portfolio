@@ -56,15 +56,15 @@ ul{
   cursor: pointer;
 }
 
-@media(max-width: 768px) {
-  .menu{
-    display:none
-  }
-}
-
 .socialLinks{
   padding-bottom: 12px;
   
   position: fixed;
   bottom: 0;
+}
+
+@media(max-width: 768px) {
+  .menu{
+    display:none
+  }
 }

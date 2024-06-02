@@ -145,10 +145,8 @@ function App() {
         <div className='mainContent'>
           <h1>CALLUM SHARMAN</h1>
           <h2 className='subTitle'>&lt; Graduate Software Engineer - Computer Scientist - Freelancer /&gt;</h2>
+          <div className='socialIcons'><SocialLinks></SocialLinks></div>
           <p></p>
-
-          <SocialLinks></SocialLinks>
-
 
           <div className='section' id='about'>
             <SectionHeading text={"ABOUT"}></SectionHeading>
@@ -175,6 +173,7 @@ function App() {
           <div className='section' id='resume'>
             <SectionHeading text={"RESUME"}></SectionHeading>
             Ut et labore fugiat est tempor laborum exercitation. Reprehenderit eu velit anim do duis eiusmod nisi duis tempor anim cillum labore officia velit. Quis ullamco do nostrud laborum amet excepteur eu Lorem reprehenderit elit pariatur duis. Ad consequat Lorem ullamco aliquip aliquip nulla occaecat elit. Magna et commodo ut laborum qui esse occaecat proident laborum et sunt laboris culpa.
+            Non nulla magna excepteur exercitation consectetur veniam id. Ullamco adipisicing cupidatat quis dolore ipsum qui anim adipisicing cupidatat incididunt exercitation esse elit ipsum. Sit deserunt occaecat est non dolor dolore occaecat velit aliquip cupidatat. Lorem labore quis cillum nostrud Lorem enim do Lorem ut aliqua quis. Adipisicing anim ut officia pariatur do.
           </div>
           
         </div>
