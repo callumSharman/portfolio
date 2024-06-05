@@ -24,6 +24,12 @@ function App() {
     { name: 'Resume', active: false },
   ]);
 
+  const [menuActive, setMenuActive] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuActive(!menuActive);
+  }
+
   const projects = [{
                       name: 'COMP30022 - IT Project (capstone)',
                       img: rayTracerImg2,
@@ -141,9 +147,10 @@ function App() {
   return (
   <div className="App">
       {/* menu button only visible on mobile */}
-      <MenuButton></MenuButton>
+      <MenuButton toggleMenu={ toggleMenu }></MenuButton>
       
-      <Menu sections={ sections }/>
+      <Menu sections={ sections } menuActive={ menuActive }/>
+
       {/* <ParticleSystem width={windowWidth} height={windowHeight}/> */}
       <div className='main'>
         <div className='mainContent'>

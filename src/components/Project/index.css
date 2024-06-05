@@ -35,7 +35,7 @@
 .imgSectionAfter{
   display: none;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 9px;
   justify-content: left;
 }
 
@@ -65,7 +65,7 @@
 @media(max-width: 768px) {
   .projectContainer{
     flex-direction: column;
-    margin-bottom: 70px;
+    margin-bottom: 90px;
   }
   .imgSectionBefore{
     display: none;
