@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './index.css'
 
-function MenuButton({ toggleMenu }){
+function MenuButton({ toggleMenu, mobileMenuActive }){
   const [menuActive, setMenuActive] = useState(false);
 
   const handleClick = () => {
@@ -11,7 +11,8 @@ function MenuButton({ toggleMenu }){
 
   return(
     <div className='menuHeader' 
-      style={{backgroundColor:menuActive ? 'rgba(255, 255, 255, 0)': '#133877de',
+      style={{display:mobileMenuActive ? 'block': 'none',
+              backgroundColor:menuActive ? 'rgba(255, 255, 255, 0)': '#133877de',
               backdropFilter:menuActive ? 'blur(0px)': 'blur(2px)',
               borderColor:menuActive ? 'rgba(255, 255, 255, 0)': '#2d76f318'
       }}>

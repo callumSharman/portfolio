@@ -1,7 +1,7 @@
 import './index.css'
 import SocialLinks from '../SocialLinks/index.js'
 
-function Menu({ sections, menuActive }){
+function Menu({ sections, menuActive, mobileMenuActive }){
   function scrollToSection(id){
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 
@@ -22,7 +22,8 @@ function Menu({ sections, menuActive }){
   return(
     <>
       <div className='menu' 
-        style={{display:menuActive ? 'flex': 'none'}}>
+        style={{display:menuActive ? 'flex': 'none',}}>
+
         <div className='inPageLinks'>
 
           {/* links to page areas */}

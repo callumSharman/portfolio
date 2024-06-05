@@ -25,6 +25,7 @@ function App() {
   ]);
 
   const [menuActive, setMenuActive] = useState(false);
+  const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
@@ -133,11 +134,21 @@ function App() {
       })));     
     }
 
+    const handleResize = () => {
+      if(window.innerWidth <= 768){
+        setMobileMenuActive(true);
+      } else{
+        setMobileMenuActive(false);
+      }
+    }
+
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
 
     // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
   })
 
@@ -147,9 +158,9 @@ function App() {
   return (
   <div className="App">
       {/* menu button only visible on mobile */}
-      <MenuButton toggleMenu={ toggleMenu }></MenuButton>
+      <MenuButton toggleMenu={ toggleMenu } mobileMenuActive={ mobileMenuActive }></MenuButton>
       
-      <Menu sections={ sections } menuActive={ menuActive }/>
+      <Menu sections={ sections } menuActive={ menuActive } mobileMenuActive={ mobileMenuActive }/>
 
       {/* <ParticleSystem width={windowWidth} height={windowHeight}/> */}
       <div className='main'>
