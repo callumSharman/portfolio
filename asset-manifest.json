@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d308d7d7.css",
-    "main.js": "/portfolio/static/js/main.34239a79.js",
+    "main.css": "/portfolio/static/css/main.800eeb1c.css",
+    "main.js": "/portfolio/static/js/main.8b5c1c0a.js",
     "static/media/bells1.JPG": "/portfolio/static/media/bells1.02d6af578e273214468d.JPG",
     "static/media/glass_metal_highres.png": "/portfolio/static/media/glass_metal_highres.02d4acd77375cff3388b.png",
     "static/media/glass_final_highres.png": "/portfolio/static/media/glass_final_highres.69742febd7185de1512c.png",
@@ -12,11 +12,11 @@
     "static/media/icons8-goodreads.svg": "/portfolio/static/media/icons8-goodreads.783abd95d2070a2da1463ab3bc88ed53.svg",
     "static/media/icons8-linkedin.svg": "/portfolio/static/media/icons8-linkedin.169894585126130448dc8b0f64a41b18.svg",
     "index.html": "/portfolio/index.html",
-    "main.d308d7d7.css.map": "/portfolio/static/css/main.d308d7d7.css.map",
-    "main.34239a79.js.map": "/portfolio/static/js/main.34239a79.js.map"
+    "main.800eeb1c.css.map": "/portfolio/static/css/main.800eeb1c.css.map",
+    "main.8b5c1c0a.js.map": "/portfolio/static/js/main.8b5c1c0a.js.map"
   },
   "entrypoints": [
-    "static/css/main.d308d7d7.css",
-    "static/js/main.34239a79.js"
+    "static/css/main.800eeb1c.css",
+    "static/js/main.8b5c1c0a.js"
   ]
 }
