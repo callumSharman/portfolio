@@ -11,13 +11,13 @@ function Menu({ sections }){
   }
 
   const links = sections.map((section, index) => {
-    return<li key={index} 
+    return<li key={index} className='btnContainer'>
+            <button className='link'
+              onClick={() => scrollToSection(section.name.toLowerCase())}
               style={{fontSize: section.active ? '20pt': '12pt',
-                      fontWeight: section.active ? 'bold': 'normal',
-              }} 
-              className='link' 
-              onClick={() => scrollToSection(section.name.toLowerCase())}>
-            {section.name}
+                      fontWeight: section.active ? 'bold': 'normal',}}>
+              {section.name}
+            </button>
           </li>;
   });
 
@@ -41,11 +41,6 @@ function Menu({ sections }){
   });
 
   const areLinksVisible = () => {
-    /**
-     * if not in mobile mode then true
-     * if mobilemode active and menu open then true
-     * else if mobile move active and menu closed then false
-     */
     if(!inMobileMode) return true;
     else if(inMobileMode && mobileMenuOpen) return true;
     else if(inMobileMode && !mobileMenuOpen) return false;

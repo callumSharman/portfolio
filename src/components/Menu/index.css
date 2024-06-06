@@ -44,10 +44,19 @@ ul{
   padding: 0px;
 }
 
+.btnContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .link{
+  font-family: monospace;
+  color: var(--colour-text);
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
   padding: 5px;
   font-size: 12pt;
-  text-align: center;
   transition: 0.1s ease-in-out;
 }
 
