@@ -2,20 +2,8 @@ import Menu from '../Menu/index.js';
 import MenuButton from '../MenuButton/index.js';
 import { useState, useEffect } from 'react';
 
-function MenuManager(){
-  const [sections, setSections] = useState([
-    { name: 'About', active: true },
-    { name: 'Projects', active: false },
-    { name: 'Contact', active: false },
-    { name: 'Resume', active: false },
-  ]);
-
-  const [menuActive, setMenuActive] = useState(false);
-  const [mobileMenuActive, setMobileMenuActive] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuActive(!menuActive);
-  }
+function MenuManager({ pageSections }){
+  const [sections, setSections] = useState(pageSections);
 
   const determineActiveSection = (section, scrollHeight) => {
     // may need to add a condition for when you're at the bottom of the page
@@ -62,22 +50,11 @@ function MenuManager(){
         active: activeSection.name.toLowerCase() === section.name.toLowerCase()
       })));     
     }
-
-    const handleResize = () => {
-      if(window.innerWidth <= 768){
-        setMobileMenuActive(true);
-      } else{
-        setMobileMenuActive(false);
-      }
-    }
-
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
 
     // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
     };
   })
 
@@ -85,9 +62,8 @@ function MenuManager(){
   return(
     <>
       {/* menu button only visible on mobile */}
-      <MenuButton toggleMenu={ toggleMenu } mobileMenuActive={ mobileMenuActive }></MenuButton>
-      
-      <Menu sections={ sections } menuActive={ menuActive } mobileMenuActive={ mobileMenuActive }/>
+      {/* <MenuButton></MenuButton> */}
+      <Menu sections={ sections }/>
     </>
   );
 }

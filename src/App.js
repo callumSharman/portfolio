@@ -14,6 +14,12 @@ import infextionAI from './img/infextionAI/infextionAI2.JPG'
 import MenuManager from './components/MenuManager/index.js';
 
 function App() {
+  const sections = [
+    { name: 'About', active: true },
+    { name: 'Projects', active: false },
+    { name: 'Contact', active: false },
+    { name: 'Resume', active: false },
+  ];
 
   const projects = [{
                       name: 'COMP30022 - IT Project (capstone)',
@@ -77,7 +83,7 @@ function App() {
 
   return (
   <div className="App">
-      <MenuManager></MenuManager>
+      <MenuManager pageSections={ sections }></MenuManager>
 
       {/* <ParticleSystem width={windowWidth} height={windowHeight}/> */}
       <div className='main'>
