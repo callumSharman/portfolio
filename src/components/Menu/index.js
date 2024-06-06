@@ -30,6 +30,10 @@ function Menu({ sections }){
   });
 
   useEffect(() => {
+    const handleLoadIn = () => {
+      handleResize();
+    }
+
     const handleResize = () => {
       if(window.innerWidth <= 768){
         setInMobileMode(true);
@@ -45,9 +49,11 @@ function Menu({ sections }){
     else {document.body.style.overflow = '';}
 
     window.addEventListener('resize', handleResize);
+    window.addEventListener('load', handleLoadIn);
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('load', handleLoadIn);
       document.body.style.overflow = '';
     };
   });
