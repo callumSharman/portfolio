@@ -1,6 +1,6 @@
 import './index.css'
 import SocialLinks from '../SocialLinks/index.js'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Menu({ sections }){
   const [inMobileMode, setInMobileMode] = useState(false);
@@ -8,7 +8,6 @@ function Menu({ sections }){
 
   function scrollToSection(id){
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-
   }
 
   const links = sections.map((section, index) => {
@@ -21,6 +20,36 @@ function Menu({ sections }){
             {section.name}
           </li>;
   });
+
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth <= 768){
+        setInMobileMode(true);
+        setMoblieMenuOpen(false); // closes menu
+      } else {
+        setInMobileMode(false);
+        setMoblieMenuOpen(true); // opens the full menu back up
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  });
+
+  const areLinksVisible = () => {
+    /**
+     * if not in mobile mode then true
+     * if mobilemode active and menu open then true
+     * else if mobile move active and menu closed then false
+     */
+    if(!inMobileMode) return true;
+    else if(inMobileMode && mobileMenuOpen) return true;
+    else if(inMobileMode && !mobileMenuOpen) return false;
+  }
 
   return(
     <>
@@ -38,7 +67,8 @@ function Menu({ sections }){
           </div>
         </div>
 
-        <div className='inPageLinks'>
+        <div className='inPageLinks' 
+          style={{display:areLinksVisible() ? 'block':'none'}}>
 
           {/* links to page areas */}
           <nav><ul>{ links }</ul></nav>
