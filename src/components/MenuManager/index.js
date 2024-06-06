@@ -1,5 +1,4 @@
 import Menu from '../Menu/index.js';
-import MenuButton from '../MenuButton/index.js';
 import { useState, useEffect } from 'react';
 
 function MenuManager({ pageSections }){

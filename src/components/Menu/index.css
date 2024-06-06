@@ -83,6 +83,13 @@ ul{
   transition: 1s;
 }
 
+.menuBtnLine{
+  background-color: white;
+  height: 4px;
+  width: 38px;
+  margin: 7px;
+}
+
 @media(max-width: 768px) {
   .menu{
     width: 100%;
