@@ -39,7 +39,7 @@ function App() {
                       name: 'Portfolio',
                       desc:"My personal portfolio website created using React, HTML, CSS, and JavaScript. Take a look around.",
                       technologies: ["React", "HTML", "CSS", "JavaScript"],
-                      link: "https://callumsharman.github.io/portfolio/",
+                      link: "https://github.com/callumSharman/portfolio/tree/main",
                     },
                     {
                       name: 'RayTracer', 

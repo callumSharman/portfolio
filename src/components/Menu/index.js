@@ -32,11 +32,15 @@ function Menu({ sections }){
       }
     }
 
+    if (!inMobileMode){ document.body.style.overflow = '';}
+    else if (mobileMenuOpen && inMobileMode) {document.body.style.overflow = 'hidden';}
+    else {document.body.style.overflow = '';}
+
     window.addEventListener('resize', handleResize);
 
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
+      document.body.style.overflow = '';
     };
   });
 
@@ -49,7 +53,8 @@ function Menu({ sections }){
   return(
     <>
       <div className='menu' style={{height:mobileMenuOpen ? '100%':'60px'}}>
-        <div style={{display:inMobileMode ? 'block':'none'}}>
+        <div style={{display:inMobileMode ? 'block':'none',
+        }}>
           <div className='menuButton' onClick={ () => setMoblieMenuOpen(!mobileMenuOpen) }
             style={{display:mobileMenuOpen ? 'flex': 'none',}}>
             X
