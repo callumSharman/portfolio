@@ -23,7 +23,7 @@ function MenuButton({ toggleMenu, mobileMenuActive }){
       <div className='menuButton' onClick={ handleClick } 
         style={{display:menuActive ? 'none': 'flex',}}>
         <div>
-          <div class="menuBtnLine"></div><div class="menuBtnLine"></div><div class="menuBtnLine"></div>
+          <div className="menuBtnLine"></div><div className="menuBtnLine"></div><div className="menuBtnLine"></div>
         </div>
       </div>
     </div>
