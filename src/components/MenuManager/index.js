@@ -10,9 +10,9 @@ function MenuManager({ pageSections }){
     const { top } = element.getBoundingClientRect();
     const elemHeight = top + window.scrollY;
 
-    // if the height of the current section is <= height scrolled to + 20% of the window height
-    // to make the section become active when its lower on the page, inc the % from 20
-    if(elemHeight <= (scrollHeight + (window.innerHeight * 0.2))){
+    // if the height of the current section is <= height scrolled to + 30% of the window height
+    // to make the section become active when its lower on the page, inc the % from 30
+    if(elemHeight <= (scrollHeight + (window.innerHeight * 0.3))){
       return true;
     }
     else return false;

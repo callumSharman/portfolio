@@ -1,0 +1,60 @@
+.contactBox{
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.leftContactBoxSide{
+  width: 30%;
+}
+
+.rightContactBoxSide{
+  width: 70%;
+}
+
+.australia{
+  width:160%;
+  position: relative;
+  top: -25%;
+  left: -40%;
+  z-index: -1;
+}
+
+.email{
+  width: 100%;
+  color:var(--colour-two);
+  font-size: 13pt;
+  font-weight: bold;
+  text-align: right;
+  padding-top: 70px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.copyIcon{
+  width: 20px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.copyIcon:hover{
+  filter: invert(85%) sepia(44%) saturate(2152%) hue-rotate(185deg) brightness(108%) contrast(103%);
+}
+
+@media(max-width: 768px){
+  .contactBox{
+    flex-direction: column;
+  }
+  .leftContactBoxSide{
+    display: none;
+  }
+  .rightContactBoxSide{
+    width: 100%;
+  }
+  .email{
+    padding-top: 30px;
+  }
+}

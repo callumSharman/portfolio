@@ -7,7 +7,6 @@ h2{
   font-size: 15pt;
 
   color: var(--colour-two);
-  animation: h2Load 0.6s ease-in-out;
 }
 
 .divider{

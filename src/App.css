@@ -12,6 +12,7 @@ body{
   font-size: 11pt;
   background-color: var(--colour-one);
   color: var(--colour-text);
+  overflow-x: hidden;
 }
 
 .main{
@@ -37,6 +38,7 @@ h1{
   padding: 0;
   color: #a7c5f7;
   animation: h1Load 0.6s ease-in-out;
+  animation-fill-mode: forwards;
   position: relative;
   left: 0px;
 }
@@ -50,7 +52,6 @@ h2{
   font-size: 15pt;
 
   color: var(--colour-two);
-  animation: h2Load 0.6s ease-in-out;
 }
 
 h3{
@@ -60,13 +61,6 @@ h3{
 }
 
 @keyframes h1Load {
-  from{
-    color: var(--colour-one);
-    left: 200px;
-  }
-}
-
-@keyframes h2Load {
   from{
     color: var(--colour-one);
     left: 200px;
@@ -84,6 +78,12 @@ h3{
   display: none;
   position: relative;
   left: -12px; /* takes of the auto padding effectively*/
+}
+
+#footer{
+  font-size: 10pt;
+  color: #a4acb698;
+  text-align: left;
 }
 
 @media(max-width: 768px) {
@@ -109,5 +109,9 @@ h3{
   }
   .socialIcons{
     display: block;
+  }
+
+  #footer{
+    margin-top: 40px;
   }
 }

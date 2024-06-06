@@ -3,6 +3,8 @@ import ParticleSystem from './components/ParticleSystem/index.js'
 import SectionHeading from './components/SectionHeading/index.js';
 import Project from './components/Project/index.js';
 import SocialLinks from './components/SocialLinks/index.js';
+import MenuManager from './components/MenuManager/index.js';
+import ContactSection from './components/ContactSection/index.js';
 
 
 import rayTracerImg from './img/raytracer/glass_final_highres.png'
@@ -11,14 +13,14 @@ import bellsBestCutsImg from './img/bellsbestcuts/bells1.JPG'
 import cipherImg from './img/CIPHER/ingame.JPG'
 import glitchShaderImg from './img/glitchShader/shaderExample.JPG'
 import infextionAI from './img/infextionAI/infextionAI2.JPG'
-import MenuManager from './components/MenuManager/index.js';
+
 
 function App() {
   const sections = [
     { name: 'About', active: true },
     { name: 'Projects', active: false },
+    { name: 'Resume', active: false},
     { name: 'Contact', active: false },
-    { name: 'Resume', active: false },
   ];
 
   const projects = [{
@@ -110,15 +112,16 @@ function App() {
             { projectItems }
           </div>
 
-          <div className='section' id='contact'>
-            <SectionHeading text={"CONTACT"}></SectionHeading>
-            Do et eiusmod ex sunt dolore nostrud. Minim est cupidatat dolor consectetur ex occaecat dolore Lorem officia ex do nisi adipisicing. Qui laborum esse ad ipsum dolor sint excepteur elit veniam aute cillum duis ex excepteur. Nisi occaecat laborum eiusmod laborum fugiat velit aute aliquip excepteur officia aliquip deserunt cillum eiusmod. Sunt esse consequat eiusmod adipisicing laborum labore ea.
-          </div>
-
           <div className='section' id='resume'>
             <SectionHeading text={"RESUME"}></SectionHeading>
             Ut et labore fugiat est tempor laborum exercitation. Reprehenderit eu velit anim do duis eiusmod nisi duis tempor anim cillum labore officia velit. Quis ullamco do nostrud laborum amet excepteur eu Lorem reprehenderit elit pariatur duis. Ad consequat Lorem ullamco aliquip aliquip nulla occaecat elit. Magna et commodo ut laborum qui esse occaecat proident laborum et sunt laboris culpa.
             Non nulla magna excepteur exercitation consectetur veniam id. Ullamco adipisicing cupidatat quis dolore ipsum qui anim adipisicing cupidatat incididunt exercitation esse elit ipsum. Sit deserunt occaecat est non dolor dolore occaecat velit aliquip cupidatat. Lorem labore quis cillum nostrud Lorem enim do Lorem ut aliqua quis. Adipisicing anim ut officia pariatur do.
+          </div>
+
+          <ContactSection></ContactSection>
+
+          <div className='section' id='footer'>
+            Designed and developed by me in Visual Studio Code with React, deployed through GitHub Pages
           </div>
           
         </div>
