@@ -6,14 +6,22 @@ function Menu({ sections }){
   const [inMobileMode, setInMobileMode] = useState(false);
   const [mobileMenuOpen, setMoblieMenuOpen] = useState(true);
 
-  function scrollToSection(id){
+  const scrollToSection = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+
+  }
+
+  const handleLinkClick = (section) => {
+    scrollToSection(section.name.toLowerCase());
+    if(inMobileMode){
+      setMoblieMenuOpen(false);
+    }
   }
 
   const links = sections.map((section, index) => {
     return<li key={index} className='btnContainer'>
             <button className='link'
-              onClick={() => scrollToSection(section.name.toLowerCase())}
+              onClick={ () => {handleLinkClick(section)} }
               style={{fontSize: section.active ? '20pt': '12pt',
                       fontWeight: section.active ? 'bold': 'normal',}}>
               {section.name}
@@ -69,7 +77,7 @@ function Menu({ sections }){
         </div>
 
         <div className='inPageLinks' 
-          style={{display:areLinksVisible() ? 'block':'none'}}>
+          style={{display:areLinksVisible() ? 'block':'none',}}>
 
           {/* links to page areas */}
           <nav><ul>{ links }</ul></nav>

@@ -88,12 +88,12 @@ ul{
   align-items: center;
   justify-content: center;
 
-  color: var(--colour-text);
+  color: white;
   transition: 1s;
 }
 
 .menuBtnLine{
-  background-color: var(--colour-text);
+  background-color: white;
   height: 4px;
   width: 34px;
   margin: 6px;
