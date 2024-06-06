@@ -75,39 +75,39 @@ ul{
 
 .menuButton{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin: 10px;
-  width: 50px;
+  width: 45px;
   position: fixed;
   top: 0;
   z-index: 10000;
-  height: 40px;
-  font-size: 38pt;
+  height: 45px;
+  font-size: 30pt;
   right: 0;
+  margin-right: 5px;
 
   display: none;
   align-items: center;
   justify-content: center;
 
-  color: white;
+  color: var(--colour-text);
   transition: 1s;
 }
 
 .menuBtnLine{
-  background-color: white;
+  background-color: var(--colour-text);
   height: 4px;
-  width: 38px;
-  margin: 7px;
+  width: 34px;
+  margin: 6px;
 }
 
 @media(max-width: 768px) {
   .menu{
     width: 100%;
-    background-color: #133877de;
+    background-color: #133877af;
     backdrop-filter: blur(2px);
   }
   .menu:hover{
     width: 100%;
-    background-color: #133877de;
+    background-color: #133877af;
     backdrop-filter: blur(2px);
     box-shadow: none;
   }

@@ -52,7 +52,8 @@ function Menu({ sections }){
 
   return(
     <>
-      <div className='menu' style={{height:mobileMenuOpen ? '100%':'60px'}}>
+      <div className='menu' 
+        style={{height:mobileMenuOpen ? '100%':'45px',}}>
         <div style={{display:inMobileMode ? 'block':'none',
         }}>
           <div className='menuButton' onClick={ () => setMoblieMenuOpen(!mobileMenuOpen) }
