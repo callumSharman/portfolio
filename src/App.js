@@ -19,8 +19,8 @@ function App() {
   const sections = [
     { name: 'About', active: true },
     { name: 'Projects', active: false },
-    { name: 'Resume', active: false},
     { name: 'Contact', active: false },
+    { name: 'Resume', active: false},
   ];
 
   const projects = [{
@@ -29,6 +29,7 @@ function App() {
                       desc: "A Django web application, integrated with Canvas LMS, handling student extension requests and queries. Created collaboratively in a team of five, liasing with university faculty clients to deliver the solution. Utilised agile ceremonies to enable smooth and efficient development.",
                       technologies: ["Django", "Python", "HTML", "CSS", "JavaScript", "SQL", "Docker"],
                       link: "https://github.com/jkay-y/IT-Project-6-people",
+                      clickable: false,
                     },
                     {
                       name: "Bell's Best Cuts", 
@@ -36,12 +37,14 @@ function App() {
                       desc:"Website custom designed and developed for Bell's Best Cuts, utilising Node.js, HTML, CSS and JavaScript. Throughout the project, I effectively communicated with the client, organised meetings, and led discussions to ensure adherence to their requirements.",
                       technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
                       link: "https://bellsbestcuts.com",
+                      clickable: true,
                     },
                     {
                       name: 'Portfolio',
                       desc:"My personal portfolio website created using React, HTML, CSS, and JavaScript. Take a look around.",
                       technologies: ["React", "HTML", "CSS", "JavaScript"],
                       link: "https://github.com/callumSharman/portfolio/tree/main",
+                      clickable: true,
                     },
                     {
                       name: 'RayTracer', 
@@ -49,6 +52,7 @@ function App() {
                       desc: "Ray tracing engine developed in C, designed to simulate indirect lighting and various surface types for spheres. The engine renders 3D scenes by tracing the path of light rays as they interact with objects, producing realistic images with reflections, refractions, and shadows.",
                       technologies: ["C"],
                       link: "https://github.com/callumSharman/RayTracer",
+                      clickable: true,
                     },
                     {
                       name: 'CIPHER',
@@ -56,6 +60,7 @@ function App() {
                       desc: "A fast-paced dungeon crawling game set in an oppressive cyberpunk world, offering high replayability through randomized upgrades. Developed in a group of four in the Unity game engine with all game logic written in C#, featuring custom shaders written in HLSL.",
                       technologies: ["C#", "HLSL", "Unity"],
                       link: "https://github.com/COMP30019/project-2-s3gfault",
+                      clickable: false,
                     },
                     {
                       name: 'HLSL Glitch Shader',
@@ -63,6 +68,7 @@ function App() {
                       desc: "Glitch shader written in HLSL, designed for use on 3D models in the Unity game engine. This shader creates a visually striking glitch effect by dynamically manipulating the vertices and texture colours of the models, simulating the appearance of digital distortion.",
                       technologies: ["HLSL", "C#"],
                       link: "https://github.com/callumSharman/glitch-shader",
+                      clickable: true,
                     },
                     {
                       name: 'Infexion AI',
@@ -70,14 +76,16 @@ function App() {
                       desc: "Competitive AI developed in a group of two. Designed to play the game “Infexion”, written in python. Utilises a Monte Carlo heuristic tree search algorithm to determine moves.",
                       technologies: ["Python"],
                       link: "https://github.com/callumSharman/COMP30024_Project_PartB",
+                      clickable: false,
                     },];
 
   const projectItems = projects.map(project => {
-    return(<Project name={project.name}
-                    img={project.img} 
-                    desc={project.desc} 
+    return(<Project name={ project.name }
+                    img={ project.img } 
+                    desc={ project.desc } 
                     technologies={ project.technologies }
-                    link={ project.link}></Project>)
+                    link={ project.link }
+                    clickable={ project.clickable }></Project>)
   });
 
   const windowWidth = window.innerWidth;
@@ -112,11 +120,7 @@ function App() {
             { projectItems }
           </div>
 
-          <div className='section' id='resume'>
-            <SectionHeading text={"RESUME"}></SectionHeading>
-            Ut et labore fugiat est tempor laborum exercitation. Reprehenderit eu velit anim do duis eiusmod nisi duis tempor anim cillum labore officia velit. Quis ullamco do nostrud laborum amet excepteur eu Lorem reprehenderit elit pariatur duis. Ad consequat Lorem ullamco aliquip aliquip nulla occaecat elit. Magna et commodo ut laborum qui esse occaecat proident laborum et sunt laboris culpa.
-            Non nulla magna excepteur exercitation consectetur veniam id. Ullamco adipisicing cupidatat quis dolore ipsum qui anim adipisicing cupidatat incididunt exercitation esse elit ipsum. Sit deserunt occaecat est non dolor dolore occaecat velit aliquip cupidatat. Lorem labore quis cillum nostrud Lorem enim do Lorem ut aliqua quis. Adipisicing anim ut officia pariatur do.
-          </div>
+          
 
           <ContactSection></ContactSection>
 

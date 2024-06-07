@@ -1,8 +1,9 @@
 import './index.css'
 import TechnologyBubble from '../TechnologyBubble';
 import {useState} from 'react'
+import { click } from '@testing-library/user-event/dist/click';
 
-function Project({ name, img, desc, technologies, link }){
+function Project({ name, img, desc, technologies, link, clickable }){
 
   const [isHover, setIsHover] = useState(false);
 
@@ -24,9 +25,10 @@ function Project({ name, img, desc, technologies, link }){
 
   return(
     <div className='projectContainer' 
-      onClick={() => window.open(link, '_blank')} 
+      onClick={() => {if(clickable) window.open(link, '_blank')}} 
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}>
+      onMouseLeave={handleMouseLeave}
+      style={{cursor:clickable ? 'pointer':'default'}}>
 
       <div className='imgSectionBefore'>
         <img className='imgContainer' src={img} alt="project logo"/>
@@ -34,10 +36,11 @@ function Project({ name, img, desc, technologies, link }){
 
       <div className='descSection'>
         <h3 className='projectName' 
-          style={{textDecoration: isHover ? 'underline' : 'none',
+          style={{textDecoration: isHover && clickable ? 'underline' : 'none',
                   transition: '0.01s ease-in-out',
           }}>
-          { name } ↗
+          { name } 
+          <span style={{display:clickable ? 'inline': 'none'}}> ↗</span>
         </h3>
         <p>{ desc }</p>
         <ul className='techList'>{ technologyBubbles }</ul>

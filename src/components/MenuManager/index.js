@@ -7,6 +7,7 @@ function MenuManager({ pageSections }){
   const determineActiveSection = (section, scrollHeight) => {
     // may need to add a condition for when you're at the bottom of the page
     const element = document.getElementById(section.name.toLowerCase());
+    if (!element){return false}
     const { top } = element.getBoundingClientRect();
     const elemHeight = top + window.scrollY;
 

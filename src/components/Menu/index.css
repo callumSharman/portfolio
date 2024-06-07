@@ -58,6 +58,16 @@ ul{
   padding: 5px;
   font-size: 12pt;
   transition: 0.07s ease-in;
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+
+}
+
+.downloadIcon{
+  width: 16px;
+  padding-left: 5px;
 }
 
 .link:hover{

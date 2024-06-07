@@ -1,6 +1,9 @@
 import './index.css'
 import SocialLinks from '../SocialLinks/index.js'
 import { useEffect, useState } from 'react';
+import downloadIconGrey from '../../img/downloadGrey.png'
+import downloadIconBlue from '../../img/downloadBlue.png'
+import resumePDF from '../../pdf/Resume.pdf'
 
 function Menu({ sections }){
   
@@ -20,6 +23,11 @@ function Menu({ sections }){
   }
 
   const handleLinkClick = (section) => {
+    if(section.name.toLowerCase() === "resume"){
+      window.open(resumePDF, '_blank');
+    }
+
+
     if(inMobileMode){
       scrollToSection(section.name.toLowerCase(), 35);
       setMoblieMenuOpen(false);
@@ -34,8 +42,14 @@ function Menu({ sections }){
             <button className='link'
               onClick={ () => {handleLinkClick(section)} }
               style={{fontSize: section.active ? '20pt': '12pt',
-                      fontWeight: section.active ? 'bold': 'normal',}}>
+                      fontWeight: section.active ? 'bold': 'normal',
+                      // left: (section.name.toLowerCase() === "resume") ? '10.5px':'auto',
+                      }}>
               {section.name}
+              {/* <img src={ downloadIconGrey } alt='download' className='downloadIcon'
+                style={{display: (section.name.toLowerCase() === "resume") ? 'inline': 'none'}}></img> */}
+              {/* <img src={ downloadIconBlue } alt='download' className='downloadIcon'
+                style={{display: (section.name.toLowerCase() === "resume") ? 'inline': 'none'}}></img> */}
             </button>
           </li>;
   });

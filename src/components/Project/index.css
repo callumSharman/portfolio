@@ -19,7 +19,6 @@
   background-color: var(--colour-four);
   backdrop-filter: blur(2px);
   transition: 0.07s ease-in-out;
-  cursor: pointer;
   border: solid;
   border-width: 1px;
   border-color: #2d76f318;
