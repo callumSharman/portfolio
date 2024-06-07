@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.6adc0d62.css",
-    "main.js": "/portfolio/static/js/main.791d7fdd.js",
+    "main.css": "/portfolio/static/css/main.51876d1a.css",
+    "main.js": "/portfolio/static/js/main.41d87982.js",
     "static/media/bells1.JPG": "/portfolio/static/media/bells1.02d6af578e273214468d.JPG",
     "static/media/glass_metal_highres.png": "/portfolio/static/media/glass_metal_highres.02d4acd77375cff3388b.png",
     "static/media/glass_final_highres.png": "/portfolio/static/media/glass_final_highres.69742febd7185de1512c.png",
     "static/media/ingame.JPG": "/portfolio/static/media/ingame.f49e1eaa680d6c565dbf.JPG",
+    "static/media/Resume.pdf": "/portfolio/static/media/Resume.661df9432ef6bb7b41c2.pdf",
     "static/media/infextionAI2.JPG": "/portfolio/static/media/infextionAI2.a049b9eb9750a48704a8.JPG",
     "static/media/australiaSilhouette2.webp": "/portfolio/static/media/australiaSilhouette2.17b54e1c2be0948a1b80.webp",
     "static/media/shaderExample.JPG": "/portfolio/static/media/shaderExample.bc0986acc412807b8a49.JPG",
@@ -14,11 +15,11 @@
     "static/media/icons8-goodreads.svg": "/portfolio/static/media/icons8-goodreads.783abd95d2070a2da1463ab3bc88ed53.svg",
     "static/media/icons8-linkedin.svg": "/portfolio/static/media/icons8-linkedin.169894585126130448dc8b0f64a41b18.svg",
     "index.html": "/portfolio/index.html",
-    "main.6adc0d62.css.map": "/portfolio/static/css/main.6adc0d62.css.map",
-    "main.791d7fdd.js.map": "/portfolio/static/js/main.791d7fdd.js.map"
+    "main.51876d1a.css.map": "/portfolio/static/css/main.51876d1a.css.map",
+    "main.41d87982.js.map": "/portfolio/static/js/main.41d87982.js.map"
   },
   "entrypoints": [
-    "static/css/main.6adc0d62.css",
-    "static/js/main.791d7fdd.js"
+    "static/css/main.51876d1a.css",
+    "static/js/main.41d87982.js"
   ]
 }
