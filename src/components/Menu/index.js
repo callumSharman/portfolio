@@ -3,8 +3,7 @@ import SocialLinks from '../SocialLinks/index.js'
 import { useEffect, useState } from 'react';
 
 function Menu({ sections }){
-  const [inMobileMode, setInMobileMode] = useState(false);
-  const [mobileMenuOpen, setMoblieMenuOpen] = useState(true);
+  
 
   const scrollToSection = (id, offset) => {
     const element = document.getElementById(id);
@@ -41,10 +40,10 @@ function Menu({ sections }){
           </li>;
   });
 
+  const [inMobileMode, setInMobileMode] = useState(false);
+  const [mobileMenuOpen, setMoblieMenuOpen] = useState(true);
+
   useEffect(() => {
-    const handleLoadIn = () => {
-      handleResize();
-    }
 
     const handleResize = () => {
       if(window.innerWidth <= 768){
@@ -60,15 +59,15 @@ function Menu({ sections }){
     else if (mobileMenuOpen && inMobileMode) {document.body.style.overflow = 'hidden';}
     else {document.body.style.overflow = '';}
 
+    handleResize();
+
     window.addEventListener('resize', handleResize);
-    window.addEventListener('load', handleLoadIn);
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('load', handleLoadIn);
       document.body.style.overflow = '';
     };
-  });
+  }, []);
 
   const areLinksVisible = () => {
     if(!inMobileMode) return true;
