@@ -6,15 +6,27 @@ function Menu({ sections }){
   const [inMobileMode, setInMobileMode] = useState(false);
   const [mobileMenuOpen, setMoblieMenuOpen] = useState(true);
 
-  const scrollToSection = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (id, offset) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
 
   }
 
   const handleLinkClick = (section) => {
-    scrollToSection(section.name.toLowerCase());
     if(inMobileMode){
+      scrollToSection(section.name.toLowerCase(), 35);
       setMoblieMenuOpen(false);
+    }
+    else{
+      scrollToSection(section.name.toLowerCase(), 0);
     }
   }
 

@@ -87,7 +87,7 @@ function App() {
   <div className="App">
       <MenuManager pageSections={ sections }></MenuManager>
 
-      {/* <ParticleSystem width={windowWidth} height={windowHeight}/> */}
+      {/*<ParticleSystem width={windowWidth} height={windowHeight}/>*/}
       <div className='main'>
         <div className='mainContent'>
           <h1>CALLUM SHARMAN</h1>
@@ -121,7 +121,7 @@ function App() {
           <ContactSection></ContactSection>
 
           <div className='section' id='footer'>
-            Designed and developed by me in Visual Studio Code with React, deployed through GitHub Pages
+            Designed and developed in Visual Studio Code with React, deployed through GitHub Pages
           </div>
           
         </div>
