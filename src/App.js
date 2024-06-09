@@ -13,6 +13,8 @@ import bellsBestCutsImg from './img/bellsbestcuts/bells1.JPG'
 import cipherImg from './img/CIPHER/ingame.JPG'
 import glitchShaderImg from './img/glitchShader/shaderExample.JPG'
 import infextionAI from './img/infextionAI/infextionAI2.JPG'
+import portfolioImg from './img/portfolio/portfolio.JPG'
+import { useState, useEffect } from 'react';
 
 
 function App() {
@@ -41,6 +43,7 @@ function App() {
                     },
                     {
                       name: 'Portfolio',
+                      img: portfolioImg,
                       desc:"My personal portfolio website created using React, HTML, CSS, and JavaScript. Take a look around.",
                       technologies: ["React", "HTML", "CSS", "JavaScript"],
                       link: "https://github.com/callumSharman/portfolio/tree/main",
@@ -88,18 +91,32 @@ function App() {
                     clickable={ project.clickable }></Project>)
   });
 
-  const windowWidth = window.innerWidth;
-  const windowHeight = window.innerHeight;
+  const [inMobileMode, setInMobileMode] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth <= 768) setInMobileMode(true); 
+      else setInMobileMode(false);
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
   <div className="App">
       <MenuManager pageSections={ sections }></MenuManager>
-
-      {/*<ParticleSystem width={windowWidth} height={windowHeight}/>*/}
       <div className='main'>
         <div className='mainContent'>
           <h1>CALLUM SHARMAN</h1>
-          <h2 className='subTitle'>&lt; Graduate Software Engineer - Computer Scientist - Freelancer /&gt;</h2>
+          <h2 className='subTitle' style={{display:inMobileMode ? 'none': 'inline'}}>
+            &lt; Graduate Software Engineer - Computer Scientist - Freelancer /&gt;
+          </h2>
+          <h2 className='subTitle' style={{display:inMobileMode ? 'inline': 'none'}}>
+            Graduate Software Engineer<br></br>Computer Scientist<br></br>Freelancer
+          </h2>
           <p></p>
           <div className='socialIcons'><SocialLinks></SocialLinks></div>
 
