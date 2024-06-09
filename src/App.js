@@ -1,4 +1,5 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 import ParticleSystem from './components/ParticleSystem/index.js'
 import SectionHeading from './components/SectionHeading/index.js';
 import Project from './components/Project/index.js';
@@ -14,7 +15,7 @@ import cipherImg from './img/CIPHER/ingame.JPG'
 import glitchShaderImg from './img/glitchShader/shaderExample.JPG'
 import infextionAI from './img/infextionAI/infextionAI2.JPG'
 import portfolioImg from './img/portfolio/portfolio.JPG'
-import { useState, useEffect } from 'react';
+import it6pImg from './img/capstone/it6p-light.JPG'
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
 
   const projects = [{
                       name: 'COMP30022 - IT Project (capstone)',
-                      img: rayTracerImg2,
+                      img: it6pImg,
                       desc: "A Django web application, integrated with Canvas LMS, handling student extension requests and queries. Created collaboratively in a team of five, liasing with university faculty clients to deliver the solution. Utilised agile ceremonies to enable smooth and efficient development.",
                       technologies: ["Django", "Python", "HTML", "CSS", "JavaScript", "SQL", "Docker"],
                       link: "https://github.com/jkay-y/IT-Project-6-people",
