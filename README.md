@@ -1,7 +1,10 @@
-npm run deploy
+# Portfolio Website
+This is my personal portfolio website created using React, HTML, CSS, and JavaScript.
 
-if at the bottom of the page, highlight the bottom link
+## Operation
+Currently it is deployed through GitHub Pages and is viewable here: https://callumsharman.github.io/portfolio/
 
-change capstone image
+To run the project locally in development mode use the command `npm start`. This will lauch on port 3000. Access through localhost:3000 on your browser.
 
-fix hovering over projects on mobile
+To build and deploy an updated version to GitHub Pages use the command `npm run deploy`.
+
