@@ -8,7 +8,7 @@ Currently it is deployed through GitHub Pages and is viewable here: https://call
 To run the project locally in development mode use the command `npm start`. This will lauch on port 3000. Access through localhost:3000 on your browser.
 
 To build and deploy an updated version to GitHub Pages use the command `npm run deploy`.
-
+<h3 color=#2d76f3>Extension</h3>
 ### Extension
 #### Projects
 To add further projects, add to the projects list in src/App.js
@@ -33,5 +33,5 @@ An example of this is given below:
 ```
 { name: 'Projects', active: false }
 ```
-This make sure to include a div with the className of 'section' and an id corresponding to the given name, capitals are inconsequential.
+Then make sure to include a div with the className of 'section' and an id corresponding to the given name, capitals are inconsequential.
 
