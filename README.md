@@ -8,7 +8,7 @@ Currently it is deployed through GitHub Pages and is viewable here: https://call
 To run the project locally in development mode use the command `npm start`. This will lauch on port 3000. Access through localhost:3000 on your browser.
 
 To build and deploy an updated version to GitHub Pages use the command `npm run deploy`.
-<h3 color=#2d76f3>Extension</h3>
+
 ### Extension
 #### Projects
 To add further projects, add to the projects list in src/App.js
@@ -35,3 +35,9 @@ An example of this is given below:
 ```
 Then make sure to include a div with the className of 'section' and an id corresponding to the given name, capitals are inconsequential.
 
+## Retrospective
+This project has given me a thorough understanding of the concepts and syntax needed to write a React application. I enjoyed using it and would love to work on more projects utilising it in the future. 
+
+I learnt during this project the importance of prior planning on structure of complex elements. Initially, when designing the menu I put it in its own component and ignored the mobile version. Once I began making the mobile version I caused a lot of issues because I jumped straight into a very poorly thought out implementation and wasted time trying to get that functional. Instead I should've taken a step back, like I ended up doing, and thought it through more initially.
+
+This application has been designed to be very easily modified and changed and so I may continue to update it periodically with style changes and more.
