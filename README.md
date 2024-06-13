@@ -9,8 +9,10 @@ To run the project locally in development mode use the command `npm start`. This
 
 To build and deploy an updated version to GitHub Pages use the command `npm run deploy`.
 
-### Manipulation/Extension
-To add further projects, add to the projects list in src/App.js.
+### Extension
+#### Projects
+To add further projects, add to the projects list in src/App.js
+
 An example of the required information is given below:
 ```
 {
@@ -22,3 +24,14 @@ An example of the required information is given below:
   clickable: true,
 }
 ```
+Where 'img' must be an imported image at the top of the react script.
+
+#### Sections
+To add extra section to the page, add to the sections list in src/App.js. All sections except for the first should be listed as not active.
+
+An example of this is given below:
+```
+{ name: 'Projects', active: false }
+```
+This make sure to include a div with the className of 'section' and an id corresponding to the given name, capitals are inconsequential.
+
