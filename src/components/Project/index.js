@@ -28,7 +28,11 @@ function Project({ name, img, desc, technologies, link, clickable }){
       onClick={() => {if(clickable) window.open(link, '_blank')}} 
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{cursor:clickable ? 'pointer':'default'}}>
+      style={{cursor:clickable ? 'pointer':'default',
+              backgroundColor: isHover && clickable ? 'var(--colour-four)': 'rgba(255, 255, 255, 0)',
+              backdropFilter: isHover && clickable ? 'blur(2px)': 'blur(0px)',
+              borderColor: isHover && clickable ? '#2d76f318': 'rgba(255, 255, 255, 0)',
+      }}>
 
       <div className='imgSectionBefore'>
         <img className='imgContainer' src={img} alt="project logo"/>
