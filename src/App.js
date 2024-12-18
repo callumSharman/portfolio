@@ -143,7 +143,7 @@ function App() {
           <ContactSection></ContactSection>
 
           <div className='section' id='footer'>
-            Designed and developed in Visual Studio Code with React, deployed through GitHub Pages
+            Designed and developed in Visual Studio Code with React, deployed through GitHub Pages - 2024
           </div>
           
         </div>

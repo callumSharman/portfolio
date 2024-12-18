@@ -5,11 +5,15 @@ function MenuManager({ pageSections }){
   const [sections, setSections] = useState(pageSections);
 
   const determineActiveSection = (section, scrollHeight) => {
-    // may need to add a condition for when you're at the bottom of the page
     const element = document.getElementById(section.name.toLowerCase());
     if (!element){return false}
     const { top } = element.getBoundingClientRect();
     const elemHeight = top + window.scrollY;
+
+    // if you are at the bottom of the page then return true so that the bottom section becomes active
+    if(scrollHeight + window.innerHeight >= document.documentElement.scrollHeight - 1){
+      return true;
+    }
 
     // if the height of the current section is <= height scrolled to + 30% of the window height
     // to make the section become active when its lower on the page, inc the % from 30
